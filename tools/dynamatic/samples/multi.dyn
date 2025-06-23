@@ -1,0 +1,12 @@
+# Sample sequence of commands for Dynamatic frontend
+
+
+set-dynamatic-path  .
+set-src             integration-test/dense_multi/dense_multi.c
+compile        
+write-hdl
+simulate
+# synthesize
+
+# Exit the frontend
+exit
