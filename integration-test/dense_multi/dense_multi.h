@@ -1,11 +1,13 @@
 #ifndef DENSE_MULTI_DENSE_MULTI_H
 #define DENSE_MULTI_DENSE_MULTI_H
 
-// typedef int in_int_t;
-// typedef int out_int_t;
-// typedef int inout_int_t;
+typedef int in_int_t;
+typedef int out_int_t;
+typedef int inout_int_t;
 
-typedef _BitInt(16) common_fxd_t;
+
+
+// typedef _BitInt(16) common_fxd_t;
 
 // Input dimensions
 #define INPUT_D1 4

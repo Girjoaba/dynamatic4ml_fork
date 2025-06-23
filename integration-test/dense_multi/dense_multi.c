@@ -50,41 +50,45 @@ int main(void) {
     // Input
     int input[INPUT_SIZE];
     // Layer 1
-    int    w1[OUT_L1][IN_L1];
-    int    b1[OUT_L1];
+    int w1[OUT_L1][IN_L1];
+    int b1[OUT_L1];
     int y1[INPUT_D1*OUT_L1];
     int z1[INPUT_D1*OUT_L1];
     // Layer 2
-    int    w2[OUT_L2][IN_L2];
-    int    b2[OUT_L2];
+    int w2[OUT_L2][IN_L2];
+    int b2[OUT_L2];
     int y2[INPUT_D1*OUT_L2];
     int output[OUTPUT_SIZE];
 
     // ----------- Initialization
     for (int i = 0; i < INPUT_SIZE; i++) {
-        input[i] = 1 % 4;
+        input[i] = 1;
     }
     // Layer 1
     for (int j = 0; j < OUT_L1; j++) {
         for (int i = 0; i < IN_L1; i++) {
-            w1[j][i] = rand() % 2;
+            w1[j][i] = 1;
         }
-        b1[j] = rand() % 3;
-        y1[j] = 0;
-        z1[j] = 0;
+        b1[j] = 1;
+    }
+    for (int j = 0; j < INPUT_D1*OUT_L1; j++) {
+        y1[j] = w1[0][0] * IN_L1 * input[0] + b1[0];
+        z1[j] = w1[0][0] * IN_L1 * input[0] + b1[0];
     }
     // Layer 2
     for (int j = 0; j < OUT_L2; j++) {
         for (int i = 0; i < IN_L2; i++) {
-            w2[j][i] = rand() % 2;
+            w2[j][i] = 1;
         }
-        b2[j] = rand() % 3;
-        y2[j] = 0;
+        b2[j] = 1;
     }
-    // Output
-    for (int j = 0; j < OUTPUT_SIZE; j++) {
-        output[j] = 0;
+    for (int j = 0; j < INPUT_D1*OUT_L2; j++) {
+        y2[j] = w2[0][0] * IN_L2 * z1[0] + b2[0];
     }
+    // // Output
+    // for (int j = 0; j < OUTPUT_SIZE; j++) {
+    //     output[j] = 29;
+    // }
 
     CALL_KERNEL(dense_multi,
         input, 

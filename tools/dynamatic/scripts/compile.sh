@@ -128,9 +128,10 @@ exit_on_fail "Failed to apply standard transformations to cf" \
   "Applied standard transformations to cf"
 
 # cf transformations (dynamatic)
+# --mark-memory-interfaces \ to enable LSQ
 "$DYNAMATIC_OPT_BIN" "$F_CF_TRANFORMED" \
   --arith-reduce-strength="max-adder-depth-mul=1" --push-constants \
-  --mark-memory-interfaces \
+  --force-memory-interface="force-mc=true" \
   > "$F_CF_DYN_TRANSFORMED"
 exit_on_fail "Failed to apply Dynamatic transformations to cf" \
   "Applied Dynamatic transformations to cf"
