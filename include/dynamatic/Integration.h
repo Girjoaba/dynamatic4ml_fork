@@ -289,7 +289,7 @@ void scalarPrinter<double>(const double &arg, OS &os) {
 /// directly to stdout.
 template <typename T>
 static void scalarPrinter(const T &arg, OS &os) {
-  os << "0x" << std::hex << std::setfill('0') << std::setw(8) << arg
+  os << "0x" << std::hex << std::setfill('0') << std::setw(8) << static_cast<uint16_t>(arg)
      << std::endl;
 }
 

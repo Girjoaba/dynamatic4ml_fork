@@ -2,11 +2,11 @@
 
 
 set-dynamatic-path  .
-set-src             integration-test/dense_multi/dense_multi.c
+set-src             integration-test/dense_multi_fxd/dense_multi_fxd.c
 compile        
 write-hdl
 simulate
-synthesize
+# synthesize
 
 # Exit the frontend
 exit
