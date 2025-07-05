@@ -129,6 +129,7 @@ exit_on_fail "Failed to apply standard transformations to cf" \
 
 # cf transformations (dynamatic)
 # --mark-memory-interfaces \ to enable LSQ
+# --force-memory-interface="force-mc=true" to disable LSQ
 "$DYNAMATIC_OPT_BIN" "$F_CF_TRANFORMED" \
   --arith-reduce-strength="max-adder-depth-mul=1" --push-constants \
   --force-memory-interface="force-mc=true" \
@@ -141,6 +142,7 @@ exit_on_fail "Failed to apply Dynamatic transformations to cf" \
   > "$F_HANDSHAKE"
 exit_on_fail "Failed to compile cf to handshake" "Compiled cf to handshake"
 
+# bit shift opt? 
 # handshake transformations
 "$DYNAMATIC_OPT_BIN" "$F_HANDSHAKE" \
   --handshake-analyze-lsq-usage --handshake-replace-memory-interfaces \

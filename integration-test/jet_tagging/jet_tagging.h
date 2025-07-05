@@ -1,5 +1,5 @@
-#ifndef JET_TAGGING_JET_TAGGING_H
-#define JET_TAGGING_JET_TAGGING_H
+#ifndef DENSE_MULTI_DENSE_MULTI_H
+#define DENSE_MULTI_DENSE_MULTI_H
 
 
 #include <stdint.h>
@@ -13,7 +13,7 @@
 #define INT_DEFAULT 6
 #define FRAC_DEFAULT NB_DEFAULT - INT_DEFAULT
 
-#define NB_ACC 64
+#define NB_ACC  64
 #define INT_ACC 44
 #define FRAC_ACC NB_ACC - INT_ACC
 
@@ -21,12 +21,12 @@ typedef int16_t input_t;
 
 typedef int64_t dense_accum_t;
 typedef int16_t weight_t;
-typedef int64_t bias_t;
+typedef int16_t bias_t;
 typedef int16_t layer_t;
 
 typedef int64_t dense_1_accum_t;
 typedef int16_t weight_1_t;
-typedef int64_t bias_1_t;
+typedef int16_t bias_1_t;
 typedef int16_t layer_1_t;
 
 
@@ -42,24 +42,19 @@ typedef int16_t layer_1_t;
 #define INTEGER_BITS_L2  NUMBER_BITS_L2 - FRACTION_BITS_L2 
 
 // Input dimensions
-#define INPUT_D1 4
-#define INPUT_D2 3
-#define INPUT_SIZE INPUT_D1 * INPUT_D2
+#define INPUT_D 3
+#define INPUT_SIZE INPUT_D
 
 // Layer 1 dimensions
-#define IN_L1 INPUT_D2
+#define IN_L1 INPUT_D
 #define OUT_L1 7 
-#define NB_DOT_L1 NUMBER_BITS_L1 + NUMBER_BITS_L1 + IN_L1 - 1
-#define FRAC_DOT_L1 FRACTION_BITS_L1 + FRACTION_BITS_L1 
 
 // Layer 2 dimensions
 #define IN_L2 OUT_L1
 #define OUT_L2 2 
-#define NB_DOT_L2 NUMBER_BITS_L2 + NUMBER_BITS_L2 + IN_L2 - 1
-#define FRAC_DOT_L2 FRACTION_BITS_L2 + FRACTION_BITS_L2 
 
 // Output dimensions
-#define OUTPUT_SIZE INPUT_D1 * OUT_L2
+#define OUTPUT_SIZE OUT_L2
 
 
-#endif // JET_TAGGING_FXD_JET_TAGGING_FXD_H
+#endif // DENSE_MULTI_FXD_DENSE_MULTI_FXD_H

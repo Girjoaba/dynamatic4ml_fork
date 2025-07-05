@@ -2,7 +2,7 @@
 
 
 set-dynamatic-path  .
-set-src             integration-test/dense_multi/dense_multi.c
+set-src             integration-test/jet_tagging/jet_tagging.c
 compile        
 write-hdl
 simulate

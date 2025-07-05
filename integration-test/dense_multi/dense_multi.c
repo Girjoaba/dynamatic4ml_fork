@@ -89,10 +89,10 @@ int main(void) {
         for (int i = 0; i < IN_L2; i++) {
             w2[j][i] = 1024;        // 1 in <16, 6>
         }
-        b2[j] = 0;           // -6 in <64, 44> = -6291456
+        b2[j] = 1024;           // -6 in <64, 44> = -6291456
     }
     for (int j = 0; j < INPUT_D1*OUT_L2; j++) {
-        y2[j] = 21504;      // 21 in <16, 6> = 21504
+        y2[j] = 21504 + 1024;      // 21 in <16, 6> = 21504
     }
     // // Output
     // for (int j = 0; j < OUTPUT_SIZE; j++) {
