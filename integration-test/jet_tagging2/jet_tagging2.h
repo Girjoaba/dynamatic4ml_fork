@@ -23,19 +23,23 @@ typedef int16_t default_t;
 // hls-fpga-machine-learning insert layers
 
 // Input dimensions
-#define INPUT_D 3
-#define INPUT_SIZE INPUT_D
+#define INPUT_SIZE 16
 
 // Layer 1 dimensions
-#define IN_L1 INPUT_D
-#define OUT_L1 7 
+#define IN_L0 INPUT_SIZE
+#define OUT_L0 64 
 
 // Layer 2 dimensions
-#define IN_L2 OUT_L1
-#define OUT_L2 2 
+#define IN_L1 OUT_L0
+#define OUT_L1 32 
 
-// Output dimensions
-#define OUTPUT_SIZE OUT_L2
+// Layer 3 dimensions
+#define IN_L2 OUT_L1
+#define OUT_L2 32 
+
+// Layer 4 dimensions
+#define IN_L3 OUT_L2
+#define OUT_L3 5 
 
 
 #endif // JET_TAGGING2_JET_TAGGING2_H
