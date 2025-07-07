@@ -4,136 +4,94 @@
 #include <stdlib.h>
 #include <stdint.h>
 
-    // printf("MAX_VAL=%d\n", max_val); 
-    // printf("ARGMAX index: %d\n", i);  
 
-#define ARGMAX(y, z, vec_sz)                                \
-    for (int i = 0; i < vec_sz; i++) {                   \
-        max_val = (max_val > y[i]) ? (max_val) : (y[i]); \
-    }                                                    \
-    for (int i = 0; i < vec_sz; i++) {                   \
-        if (y[i] == max_val) {                           \
-            z[i] = 1 << (FRAC_DEFAULT);                  \
-        } else {                                         \
-            z[i] = 0;                                    \
-        }                                                \
-    }                                                       
-
-
-#define RELU(y, z, out_sz)                              \
-    for (int j = 0; j < out_sz; j++) {                  \
-        tmp1 = y[j];                                    \
-        if (tmp1 > 0) {                                 \
-            tmp2 = tmp1;                                \
-        } else {                                        \
-            tmp2 = 0;                                   \
-        }                                               \
-        z[j] = tmp2;                                    \
-    }   
-
-#define TRUNCATE_LAYER(y, idx)                         \
-    acc = acc >> (FRAC_DEFAULT);                       \
-    y[idx] = (layer_1_t)acc;                           \
-    // printf("y[%d] = %d\n", idx, y[idx]);
-
-#define DOT_PROD(x, y, vec_sz)                          \
-    acc = 0;                                            \
-    for (int i = 0; i < vec_sz; i++) {                  \
-        acc += x[i] * y[i];                             \
-    }   
-
-#define DENSE(x, w, b, y, in_sz, out_sz)                \
-    for (int j = 0; j < out_sz; j++) {                  \
-        DOT_PROD(x, w[j], in_sz);                       \
-        acc += (dense_accum_t)(b[j] << (FRAC_DEFAULT)); \
-        TRUNCATE_LAYER(y, j);                           \
+#define ARGMAX(z, vec_sz, tmp_argmax)                               \
+    for (int i = 0; i < vec_sz; i++) {                              \
+        z[i] = (tmp_argmax == z[i]) ? (1 << (FRAC_DEFAULT)) : 0;    \
     }
 
+#define DOT_PROD(x, y, vec_sz, acc_dot)   \
+    acc_dot = 0;                          \
+    for (int i = 0; i < vec_sz; i++) {    \
+        acc_dot += x[i] * y[i];           \
+    }   
 
+#define DENSE_ARGMAX(x, w, b, y, in_sz, out_sz, acc_dense, tmp_act)                           \
+    for (int j = 0; j < out_sz; j++) {                                                 \
+        DOT_PROD(x, w[j], in_sz, acc_dense);                                           \
+        acc_dense += (dense_accum_t)(b[j] << (FRAC_DEFAULT));                          \
+        /* TRUNCATE */                                                                 \
+        acc_dense = acc_dense >> (FRAC_DEFAULT);                                       \
+        tmp_act = ((default_t)acc_dense > tmp_act) ? (default_t)acc_dense : tmp_act;   \
+        y[j] = (default_t)acc_dense;                                                   \
+    }
+    
+#define DENSE_RELU(x, w, b, z, in_sz, out_sz, acc_dense, tmp_relu)    \
+    for (int j = 0; j < out_sz; j++) {                                \
+        DOT_PROD(x, w[j], in_sz, acc_dense);                          \
+        acc_dense += (dense_accum_t)(b[j] << (FRAC_DEFAULT));         \
+        /* TRUNCATE */                                                \
+        acc_dense = acc_dense >> (FRAC_DEFAULT);                      \
+        tmp_relu = (default_t)acc_dense;                              \
+        /* RELU ACTIVATION */                                         \
+        z[j] = tmp_relu > 0 ? tmp_relu : 0;                           \
+    }
 
-void jet_tagging2(default_t input[INPUT_SIZE],
-                 default_t  w0[OUT_L1][IN_L1],
-                 default_t  b0[OUT_L1],
-                 default_t  y0[OUT_L1],
-                 default_t  z0[OUT_L1],
-                 default_t  w1[OUT_L2][IN_L2],
-                 default_t  b1[OUT_L2],
-                 default_t  y1[OUT_L2],
-                 default_t  z1[OUT_L2]) {
-            
-    dense_accum_t acc;
-    default_t tmp1 = 0, tmp2 = 0;
-    default_t max_val = -(1 << (NB_DEFAULT-1));
+void jet_tagging2(default_t  input[INPUT_SIZE],
+                 default_t w1[OUT_L1][IN_L1],
+                 default_t b1[OUT_L1],
+                 default_t z1[OUT_L1],
+                 default_t w2[OUT_L2][IN_L2],
+                 default_t b2[OUT_L2],
+                 default_t z2[OUT_L2]) {
+                     
+    // Layer 1:
+    dense_accum_t acc0;
+    default_t tmp_relu0 = 0;
+    DENSE_RELU(input, w1, b1, z1, IN_L1, OUT_L1, acc0, tmp_relu0);
 
-    DENSE(input, w0, b0, y0, IN_L1, OUT_L1);
-    RELU(y0, z0, OUT_L1);
-
-    DENSE(z0, w1, b1, y1, IN_L2, OUT_L2);
-
-    // for (int i = 0; i < OUT_L2; i++) {
-    //     printf("y1[%d] = %d\n", i, y1[i]);
-    // }
-    // RELU(y1, z1, OUT_L2);
-    ARGMAX(y1, z1, OUT_L2);
-    // for (int i = 0; i < OUT_L2; i++) {
-    //     printf("z1[%d] = %d\n", i, z1[i]);
-    // }
+    // Layer 2:
+    dense_accum_t acc1;
+    default_t tmp_max1 = -(1 << (NB_DEFAULT - 1));
+    DENSE_ARGMAX(z1, w2, b2, z2, IN_L2, OUT_L2, acc1, tmp_max1);
+    ARGMAX(z2, OUT_L2, tmp_max1);
 }
 
+// ===========================================================
+// -------------------------- Initialize ---------------------
 int main(void) {
-    // Input
-    default_t input[INPUT_SIZE];
-    // Layer 1
-    default_t w0[OUT_L1][IN_L1];
-    default_t  b0[OUT_L1];
-    default_t  y0[OUT_L1];
-    default_t  z0[OUT_L1];
-    // Layer 2
-    default_t  w1[OUT_L2][IN_L2];
-    default_t  b1[OUT_L2];
-    default_t  y1[OUT_L2];
-    default_t  z1[OUT_L2];
+    // --------------------------------- Input
+    default_t input[INPUT_SIZE] = {1024, 1024, 1024};
 
-    // ----------- Initialization
-    // default_precision_t o = 1;
-    for (int i = 0; i < INPUT_SIZE; i++) {
-        input[i] = 1024;            // 1 in <16, 6>
-    }
-    // Layer 1
-    for (int j = 0; j < OUT_L1; j++) {
-        for (int i = 0; i < IN_L1; i++) {
-            w0[j][i] = 1024;        // 1 in <16, 6>
-        }
-        b0[j] = -2048;       // -2 in <64, 44> = -2097152
-    }
-    for (int j = 0; j < OUT_L1; j++) {
-        y0[j] = 1024;               // 1 in <16, 6>
-        z0[j] = 1024;               // 1 in <16, 6>
-    }
-    // Layer 2
-    for (int j = 0; j < OUT_L2; j++) {
-        for (int i = 0; i < IN_L2; i++) {
-            w1[j][i] = 1024 + (j << (FRAC_DEFAULT));        // 1 in <16, 6>
-        }
-        b1[j] = -6144;           // -6 in <64, 44> = -6291456
-    }
+    // --------------------------------- Layer 1
+    default_t w1[OUT_L1][IN_L1] = {
+        {1024, 1024, 1024},
+        {1024, 1024, 1024},
+        {1024, 1024, 1024},
+        {1024, 1024, 1024},
+        {1024, 1024, 1024},
+        {1024, 1024, 1024},
+        {1024, 1024, 1024}
+    };
+    default_t   b1[OUT_L1] = {
+        -2048, -2048, -2048, -2048, -2048, -2048, -2048
+    };
+    default_t  z1[OUT_L1];
 
-    // for (int j = 0; j < OUT_L2; j++) {
-    //     y1[j] = 0;      // 21 in <16, 6> = 21504
-    // }
-    // for (int j = 0; j < OUT_L2; j++) {
-    //     z1[j] = 0;      // 21 in <16, 6> = 21504
-    // }
-    y1[0] = 1024;
-    y1[1] = 8096;
-    z1[0] = 0;
-    z1[1] = 1024;
-
+    // --------------------------------- Layer 2
+    default_t w2[OUT_L2][IN_L2] = {
+        {1024, 1024, 1024, 1024, 1024, 1024, 1024},
+        {1024, 1024, 1024, 1024, 1024, 1024, 1024}
+    };
+    default_t   b2[OUT_L2] = {
+        0, -6144
+    };
+    default_t  z2[OUT_L2];
 
     CALL_KERNEL(jet_tagging2,
         input, 
-        w0, b0, y0, z0,
-        w1, b1, y1, z1
+        w1, b1, z1,
+        w2, b2, z2
     );
     return 0;
 }
