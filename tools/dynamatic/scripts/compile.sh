@@ -90,8 +90,11 @@ export_cfg() {
 # Compilation flow
 # ============================================================================ #
 
+echo_info "starting compilation..."
+
 # Reset output directory
 rm -rf "$COMP_DIR" && mkdir -p "$COMP_DIR"
+echo_info "removal done..."
 
 # source -> affine level
 "$POLYGEIST_CLANG_BIN" "$SRC_DIR/$KERNEL_NAME.c" --function="$KERNEL_NAME" \
@@ -100,6 +103,7 @@ rm -rf "$COMP_DIR" && mkdir -p "$COMP_DIR"
   -S -O3 --memref-fullrank --raise-scf-to-affine \
   > "$F_AFFINE"
 exit_on_fail "Failed to compile source to affine" "Compiled source to affine"
+echo_info "source -> affine level"
 
 # affine level -> pre-processing and memory analysis
 "$DYNAMATIC_OPT_BIN" "$F_AFFINE" --allow-unregistered-dialect \
@@ -108,6 +112,7 @@ exit_on_fail "Failed to compile source to affine" "Compiled source to affine"
   --mark-memory-dependencies \
   > "$F_AFFINE_MEM"
 exit_on_fail "Failed to run memory analysis" "Ran memory analysis"
+echo_info "affine level -> pre-processing and memory analysis"
 
 # affine level -> scf level
 "$DYNAMATIC_OPT_BIN" "$F_AFFINE_MEM" --lower-affine-to-scf \
@@ -115,6 +120,7 @@ exit_on_fail "Failed to run memory analysis" "Ran memory analysis"
   --scf-rotate-for-loops \
   > "$F_SCF"
 exit_on_fail "Failed to compile affine to scf" "Compiled affine to scf"
+echo_info "affine level -> scf level"
 
 # scf level -> cf level
 "$DYNAMATIC_OPT_BIN" "$F_SCF" --lower-scf-to-cf > "$F_CF"

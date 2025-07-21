@@ -1,0 +1,1422 @@
+
+---
+events:
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/usr/share/cmake/Modules/CMakeDetermineSystem.cmake:204 (message)"
+      - "CMakeLists.txt:6 (project)"
+    message: |
+      The system is: Linux - 4.18.0-553.45.1.el8_10.x86_64 - x86_64
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/usr/share/cmake/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
+      - "/usr/share/cmake/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "/usr/share/cmake/Modules/CMakeDetermineCCompiler.cmake:123 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:6 (project)"
+    message: |
+      Compiling the C compiler identification source file "CMakeCCompilerId.c" succeeded.
+      Compiler: /usr/lib64/ccache/clang 
+      Build flags: 
+      Id flags:  
+      
+      The output was:
+      0
+      
+      
+      Compilation of the C compiler identification source "CMakeCCompilerId.c" produced "a.out"
+      
+      The C compiler identification is Clang, found in:
+        /home/agirjoaba/dynamatic4ml_fork/visual-dataflow/build/CMakeFiles/3.26.5/CompilerIdC/a.out
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/usr/share/cmake/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
+      - "/usr/share/cmake/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "/usr/share/cmake/Modules/CMakeDetermineCXXCompiler.cmake:126 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:6 (project)"
+    message: |
+      Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" succeeded.
+      Compiler: /usr/lib64/ccache/clang++ 
+      Build flags: 
+      Id flags:  
+      
+      The output was:
+      0
+      
+      
+      Compilation of the CXX compiler identification source "CMakeCXXCompilerId.cpp" produced "a.out"
+      
+      The CXX compiler identification is Clang, found in:
+        /home/agirjoaba/dynamatic4ml_fork/visual-dataflow/build/CMakeFiles/3.26.5/CompilerIdCXX/a.out
+      
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/usr/share/cmake/Modules/CMakeDetermineCompilerABI.cmake:57 (try_compile)"
+      - "/usr/share/cmake/Modules/CMakeTestCCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:6 (project)"
+    checks:
+      - "Detecting C compiler ABI info"
+    directories:
+      source: "/home/agirjoaba/dynamatic4ml_fork/visual-dataflow/build/CMakeFiles/CMakeScratch/TryCompile-1LwGSA"
+      binary: "/home/agirjoaba/dynamatic4ml_fork/visual-dataflow/build/CMakeFiles/CMakeScratch/TryCompile-1LwGSA"
+    cmakeVariables:
+      CMAKE_C_FLAGS: ""
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+    buildResult:
+      variable: "CMAKE_C_ABI_COMPILED"
+      cached: true
+      stdout: |
+        Change Dir: /home/agirjoaba/dynamatic4ml_fork/visual-dataflow/build/CMakeFiles/CMakeScratch/TryCompile-1LwGSA
+        
+        Run Build Command(s):/usr/bin/ninja-build -v cmTC_dbcd9 && [1/2] /usr/lib64/ccache/clang   -v -MD -MT CMakeFiles/cmTC_dbcd9.dir/CMakeCCompilerABI.c.o -MF CMakeFiles/cmTC_dbcd9.dir/CMakeCCompilerABI.c.o.d -o CMakeFiles/cmTC_dbcd9.dir/CMakeCCompilerABI.c.o -c /usr/share/cmake/Modules/CMakeCCompilerABI.c
+        clang version 18.1.8 (Red Hat 18.1.8-1.module_el8.10.0+3903+ca21d481)
+        Target: x86_64-redhat-linux-gnu
+        Thread model: posix
+        InstalledDir: /usr/bin
+        Configuration file: /etc/clang/x86_64-redhat-linux-gnu.cfg
+        System configuration file directory: /etc/clang/
+        Found candidate GCC installation: /opt/rh/gcc-toolset-13/root/usr/lib/gcc/x86_64-redhat-linux/13
+        Selected GCC installation: /opt/rh/gcc-toolset-13/root/usr/lib/gcc/x86_64-redhat-linux/13
+        Candidate multilib: .;@m64
+        Candidate multilib: 32;@m32
+        Selected multilib: .;@m64
+         (in-process)
+         "/usr/bin/clang-18" -cc1 -triple x86_64-redhat-linux-gnu -emit-obj -mrelax-all -disable-free -clear-ast-before-backend -disable-llvm-verifier -discard-value-names -main-file-name CMakeCCompilerABI.c -mrelocation-model static -mframe-pointer=all -fmath-errno -ffp-contract=on -fno-rounding-math -mconstructor-aliases -funwind-tables=2 -target-cpu x86-64 -tune-cpu generic -dwarf-version=4 -debugger-tuning=gdb -fdebug-compilation-dir=/home/agirjoaba/dynamatic4ml_fork/visual-dataflow/build/CMakeFiles/CMakeScratch/TryCompile-1LwGSA -v -fcoverage-compilation-dir=/home/agirjoaba/dynamatic4ml_fork/visual-dataflow/build/CMakeFiles/CMakeScratch/TryCompile-1LwGSA -resource-dir /usr/bin/../lib/clang/18 -internal-isystem /usr/bin/../lib/clang/18/include -internal-isystem /usr/local/include -internal-isystem /opt/rh/gcc-toolset-13/root/usr/lib/gcc/x86_64-redhat-linux/13/../../../../x86_64-redhat-linux/include -internal-externc-isystem /include -internal-externc-isystem /usr/include -ferror-limit 19 -fgnuc-version=4.2.1 -fskip-odr-check-in-gmf -faddrsig -D__GCC_HAVE_DWARF2_CFI_ASM=1 -o CMakeFiles/cmTC_dbcd9.dir/CMakeCCompilerABI.c.o -x c /usr/share/cmake/Modules/CMakeCCompilerABI.c
+        clang -cc1 version 18.1.8 based upon LLVM 18.1.8 default target x86_64-redhat-linux-gnu
+        ignoring nonexistent directory "/opt/rh/gcc-toolset-13/root/usr/lib/gcc/x86_64-redhat-linux/13/../../../../x86_64-redhat-linux/include"
+        ignoring nonexistent directory "/include"
+        #include "..." search starts here:
+        #include <...> search starts here:
+         /usr/bin/../lib/clang/18/include
+         /usr/local/include
+         /usr/include
+        End of search list.
+        [2/2] : && /usr/lib64/ccache/clang  -v CMakeFiles/cmTC_dbcd9.dir/CMakeCCompilerABI.c.o -o cmTC_dbcd9   && :
+        clang version 18.1.8 (Red Hat 18.1.8-1.module_el8.10.0+3903+ca21d481)
+        Target: x86_64-redhat-linux-gnu
+        Thread model: posix
+        InstalledDir: /usr/bin
+        Configuration file: /etc/clang/x86_64-redhat-linux-gnu.cfg
+        System configuration file directory: /etc/clang/
+        Found candidate GCC installation: /opt/rh/gcc-toolset-13/root/usr/lib/gcc/x86_64-redhat-linux/13
+        Selected GCC installation: /opt/rh/gcc-toolset-13/root/usr/lib/gcc/x86_64-redhat-linux/13
+        Candidate multilib: .;@m64
+        Candidate multilib: 32;@m32
+        Selected multilib: .;@m64
+         "/usr/bin/ld" --hash-style=gnu --build-id --eh-frame-hdr -m elf_x86_64 -dynamic-linker /lib64/ld-linux-x86-64.so.2 -o cmTC_dbcd9 /lib/../lib64/crt1.o /lib/../lib64/crti.o /opt/rh/gcc-toolset-13/root/usr/lib/gcc/x86_64-redhat-linux/13/crtbegin.o -L/usr/bin/../lib/clang/18/lib/x86_64-redhat-linux-gnu -L/opt/rh/gcc-toolset-13/root/usr/lib/gcc/x86_64-redhat-linux/13 -L/opt/rh/gcc-toolset-13/root/usr/lib/gcc/x86_64-redhat-linux/13/../../../../lib64 -L/lib/../lib64 -L/usr/lib/../lib64 -L/lib -L/usr/lib CMakeFiles/cmTC_dbcd9.dir/CMakeCCompilerABI.c.o -lgcc --as-needed -lgcc_s --no-as-needed -lc -lgcc --as-needed -lgcc_s --no-as-needed /opt/rh/gcc-toolset-13/root/usr/lib/gcc/x86_64-redhat-linux/13/crtend.o /lib/../lib64/crtn.o
+        
+      exitCode: 0
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/usr/share/cmake/Modules/CMakeDetermineCompilerABI.cmake:127 (message)"
+      - "/usr/share/cmake/Modules/CMakeTestCCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:6 (project)"
+    message: |
+      Parsed C implicit include dir info: rv=done
+        found start of include info
+        found start of implicit include info
+          add: [/usr/bin/../lib/clang/18/include]
+          add: [/usr/local/include]
+          add: [/usr/include]
+        end of search list found
+        collapse include dir [/usr/bin/../lib/clang/18/include] ==> [/usr/lib/clang/18/include]
+        collapse include dir [/usr/local/include] ==> [/usr/local/include]
+        collapse include dir [/usr/include] ==> [/usr/include]
+        implicit include dirs: [/usr/lib/clang/18/include;/usr/local/include;/usr/include]
+      
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/usr/share/cmake/Modules/CMakeDetermineCompilerABI.cmake:152 (message)"
+      - "/usr/share/cmake/Modules/CMakeTestCCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:6 (project)"
+    message: |
+      Parsed C implicit link information:
+        link line regex: [^( *|.*[/\\])(ld\\.lld|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\\]+-)?ld|collect2)[^/\\]*( |$)]
+        ignore line: [Change Dir: /home/agirjoaba/dynamatic4ml_fork/visual-dataflow/build/CMakeFiles/CMakeScratch/TryCompile-1LwGSA]
+        ignore line: []
+        ignore line: [Run Build Command(s):/usr/bin/ninja-build -v cmTC_dbcd9 && [1/2] /usr/lib64/ccache/clang   -v -MD -MT CMakeFiles/cmTC_dbcd9.dir/CMakeCCompilerABI.c.o -MF CMakeFiles/cmTC_dbcd9.dir/CMakeCCompilerABI.c.o.d -o CMakeFiles/cmTC_dbcd9.dir/CMakeCCompilerABI.c.o -c /usr/share/cmake/Modules/CMakeCCompilerABI.c]
+        ignore line: [clang version 18.1.8 (Red Hat 18.1.8-1.module_el8.10.0+3903+ca21d481)]
+        ignore line: [Target: x86_64-redhat-linux-gnu]
+        ignore line: [Thread model: posix]
+        ignore line: [InstalledDir: /usr/bin]
+        ignore line: [Configuration file: /etc/clang/x86_64-redhat-linux-gnu.cfg]
+        ignore line: [System configuration file directory: /etc/clang/]
+        ignore line: [Found candidate GCC installation: /opt/rh/gcc-toolset-13/root/usr/lib/gcc/x86_64-redhat-linux/13]
+        ignore line: [Selected GCC installation: /opt/rh/gcc-toolset-13/root/usr/lib/gcc/x86_64-redhat-linux/13]
+        ignore line: [Candidate multilib: .]
+        ignore line: [@m64]
+        ignore line: [Candidate multilib: 32]
+        ignore line: [@m32]
+        ignore line: [Selected multilib: .]
+        ignore line: [@m64]
+        ignore line: [ (in-process)]
+        ignore line: [ "/usr/bin/clang-18" -cc1 -triple x86_64-redhat-linux-gnu -emit-obj -mrelax-all -disable-free -clear-ast-before-backend -disable-llvm-verifier -discard-value-names -main-file-name CMakeCCompilerABI.c -mrelocation-model static -mframe-pointer=all -fmath-errno -ffp-contract=on -fno-rounding-math -mconstructor-aliases -funwind-tables=2 -target-cpu x86-64 -tune-cpu generic -dwarf-version=4 -debugger-tuning=gdb -fdebug-compilation-dir=/home/agirjoaba/dynamatic4ml_fork/visual-dataflow/build/CMakeFiles/CMakeScratch/TryCompile-1LwGSA -v -fcoverage-compilation-dir=/home/agirjoaba/dynamatic4ml_fork/visual-dataflow/build/CMakeFiles/CMakeScratch/TryCompile-1LwGSA -resource-dir /usr/bin/../lib/clang/18 -internal-isystem /usr/bin/../lib/clang/18/include -internal-isystem /usr/local/include -internal-isystem /opt/rh/gcc-toolset-13/root/usr/lib/gcc/x86_64-redhat-linux/13/../../../../x86_64-redhat-linux/include -internal-externc-isystem /include -internal-externc-isystem /usr/include -ferror-limit 19 -fgnuc-version=4.2.1 -fskip-odr-check-in-gmf -faddrsig -D__GCC_HAVE_DWARF2_CFI_ASM=1 -o CMakeFiles/cmTC_dbcd9.dir/CMakeCCompilerABI.c.o -x c /usr/share/cmake/Modules/CMakeCCompilerABI.c]
+        ignore line: [clang -cc1 version 18.1.8 based upon LLVM 18.1.8 default target x86_64-redhat-linux-gnu]
+        ignore line: [ignoring nonexistent directory "/opt/rh/gcc-toolset-13/root/usr/lib/gcc/x86_64-redhat-linux/13/../../../../x86_64-redhat-linux/include"]
+        ignore line: [ignoring nonexistent directory "/include"]
+        ignore line: [#include "..." search starts here:]
+        ignore line: [#include <...> search starts here:]
+        ignore line: [ /usr/bin/../lib/clang/18/include]
+        ignore line: [ /usr/local/include]
+        ignore line: [ /usr/include]
+        ignore line: [End of search list.]
+        ignore line: [[2/2] : && /usr/lib64/ccache/clang  -v CMakeFiles/cmTC_dbcd9.dir/CMakeCCompilerABI.c.o -o cmTC_dbcd9   && :]
+        ignore line: [clang version 18.1.8 (Red Hat 18.1.8-1.module_el8.10.0+3903+ca21d481)]
+        ignore line: [Target: x86_64-redhat-linux-gnu]
+        ignore line: [Thread model: posix]
+        ignore line: [InstalledDir: /usr/bin]
+        ignore line: [Configuration file: /etc/clang/x86_64-redhat-linux-gnu.cfg]
+        ignore line: [System configuration file directory: /etc/clang/]
+        ignore line: [Found candidate GCC installation: /opt/rh/gcc-toolset-13/root/usr/lib/gcc/x86_64-redhat-linux/13]
+        ignore line: [Selected GCC installation: /opt/rh/gcc-toolset-13/root/usr/lib/gcc/x86_64-redhat-linux/13]
+        ignore line: [Candidate multilib: .]
+        ignore line: [@m64]
+        ignore line: [Candidate multilib: 32]
+        ignore line: [@m32]
+        ignore line: [Selected multilib: .]
+        ignore line: [@m64]
+        link line: [ "/usr/bin/ld" --hash-style=gnu --build-id --eh-frame-hdr -m elf_x86_64 -dynamic-linker /lib64/ld-linux-x86-64.so.2 -o cmTC_dbcd9 /lib/../lib64/crt1.o /lib/../lib64/crti.o /opt/rh/gcc-toolset-13/root/usr/lib/gcc/x86_64-redhat-linux/13/crtbegin.o -L/usr/bin/../lib/clang/18/lib/x86_64-redhat-linux-gnu -L/opt/rh/gcc-toolset-13/root/usr/lib/gcc/x86_64-redhat-linux/13 -L/opt/rh/gcc-toolset-13/root/usr/lib/gcc/x86_64-redhat-linux/13/../../../../lib64 -L/lib/../lib64 -L/usr/lib/../lib64 -L/lib -L/usr/lib CMakeFiles/cmTC_dbcd9.dir/CMakeCCompilerABI.c.o -lgcc --as-needed -lgcc_s --no-as-needed -lc -lgcc --as-needed -lgcc_s --no-as-needed /opt/rh/gcc-toolset-13/root/usr/lib/gcc/x86_64-redhat-linux/13/crtend.o /lib/../lib64/crtn.o]
+          arg [/usr/bin/ld] ==> ignore
+          arg [--hash-style=gnu] ==> ignore
+          arg [--build-id] ==> ignore
+          arg [--eh-frame-hdr] ==> ignore
+          arg [-m] ==> ignore
+          arg [elf_x86_64] ==> ignore
+          arg [-dynamic-linker] ==> ignore
+          arg [/lib64/ld-linux-x86-64.so.2] ==> ignore
+          arg [-o] ==> ignore
+          arg [cmTC_dbcd9] ==> ignore
+          arg [/lib/../lib64/crt1.o] ==> obj [/lib/../lib64/crt1.o]
+          arg [/lib/../lib64/crti.o] ==> obj [/lib/../lib64/crti.o]
+          arg [/opt/rh/gcc-toolset-13/root/usr/lib/gcc/x86_64-redhat-linux/13/crtbegin.o] ==> obj [/opt/rh/gcc-toolset-13/root/usr/lib/gcc/x86_64-redhat-linux/13/crtbegin.o]
+          arg [-L/usr/bin/../lib/clang/18/lib/x86_64-redhat-linux-gnu] ==> dir [/usr/bin/../lib/clang/18/lib/x86_64-redhat-linux-gnu]
+          arg [-L/opt/rh/gcc-toolset-13/root/usr/lib/gcc/x86_64-redhat-linux/13] ==> dir [/opt/rh/gcc-toolset-13/root/usr/lib/gcc/x86_64-redhat-linux/13]
+          arg [-L/opt/rh/gcc-toolset-13/root/usr/lib/gcc/x86_64-redhat-linux/13/../../../../lib64] ==> dir [/opt/rh/gcc-toolset-13/root/usr/lib/gcc/x86_64-redhat-linux/13/../../../../lib64]
+          arg [-L/lib/../lib64] ==> dir [/lib/../lib64]
+          arg [-L/usr/lib/../lib64] ==> dir [/usr/lib/../lib64]
+          arg [-L/lib] ==> dir [/lib]
+          arg [-L/usr/lib] ==> dir [/usr/lib]
+          arg [CMakeFiles/cmTC_dbcd9.dir/CMakeCCompilerABI.c.o] ==> ignore
+          arg [-lgcc] ==> lib [gcc]
+          arg [--as-needed] ==> ignore
+          arg [-lgcc_s] ==> lib [gcc_s]
+          arg [--no-as-needed] ==> ignore
+          arg [-lc] ==> lib [c]
+          arg [-lgcc] ==> lib [gcc]
+          arg [--as-needed] ==> ignore
+          arg [-lgcc_s] ==> lib [gcc_s]
+          arg [--no-as-needed] ==> ignore
+          arg [/opt/rh/gcc-toolset-13/root/usr/lib/gcc/x86_64-redhat-linux/13/crtend.o] ==> obj [/opt/rh/gcc-toolset-13/root/usr/lib/gcc/x86_64-redhat-linux/13/crtend.o]
+          arg [/lib/../lib64/crtn.o] ==> obj [/lib/../lib64/crtn.o]
+        collapse obj [/lib/../lib64/crt1.o] ==> [/lib64/crt1.o]
+        collapse obj [/lib/../lib64/crti.o] ==> [/lib64/crti.o]
+        collapse obj [/lib/../lib64/crtn.o] ==> [/lib64/crtn.o]
+        collapse library dir [/usr/bin/../lib/clang/18/lib/x86_64-redhat-linux-gnu] ==> [/usr/lib/clang/18/lib/x86_64-redhat-linux-gnu]
+        collapse library dir [/opt/rh/gcc-toolset-13/root/usr/lib/gcc/x86_64-redhat-linux/13] ==> [/opt/rh/gcc-toolset-13/root/usr/lib/gcc/x86_64-redhat-linux/13]
+        collapse library dir [/opt/rh/gcc-toolset-13/root/usr/lib/gcc/x86_64-redhat-linux/13/../../../../lib64] ==> [/opt/rh/gcc-toolset-13/root/usr/lib64]
+        collapse library dir [/lib/../lib64] ==> [/lib64]
+        collapse library dir [/usr/lib/../lib64] ==> [/usr/lib64]
+        collapse library dir [/lib] ==> [/lib]
+        collapse library dir [/usr/lib] ==> [/usr/lib]
+        implicit libs: [gcc;gcc_s;c;gcc;gcc_s]
+        implicit objs: [/lib64/crt1.o;/lib64/crti.o;/opt/rh/gcc-toolset-13/root/usr/lib/gcc/x86_64-redhat-linux/13/crtbegin.o;/opt/rh/gcc-toolset-13/root/usr/lib/gcc/x86_64-redhat-linux/13/crtend.o;/lib64/crtn.o]
+        implicit dirs: [/usr/lib/clang/18/lib/x86_64-redhat-linux-gnu;/opt/rh/gcc-toolset-13/root/usr/lib/gcc/x86_64-redhat-linux/13;/opt/rh/gcc-toolset-13/root/usr/lib64;/lib64;/usr/lib64;/lib;/usr/lib]
+        implicit fwks: []
+      
+      
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/usr/share/cmake/Modules/CMakeDetermineCompilerABI.cmake:57 (try_compile)"
+      - "/usr/share/cmake/Modules/CMakeTestCXXCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:6 (project)"
+    checks:
+      - "Detecting CXX compiler ABI info"
+    directories:
+      source: "/home/agirjoaba/dynamatic4ml_fork/visual-dataflow/build/CMakeFiles/CMakeScratch/TryCompile-INTRrL"
+      binary: "/home/agirjoaba/dynamatic4ml_fork/visual-dataflow/build/CMakeFiles/CMakeScratch/TryCompile-INTRrL"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: ""
+      CMAKE_CXX_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+    buildResult:
+      variable: "CMAKE_CXX_ABI_COMPILED"
+      cached: true
+      stdout: |
+        Change Dir: /home/agirjoaba/dynamatic4ml_fork/visual-dataflow/build/CMakeFiles/CMakeScratch/TryCompile-INTRrL
+        
+        Run Build Command(s):/usr/bin/ninja-build -v cmTC_8fdc9 && [1/2] /usr/lib64/ccache/clang++   -v -MD -MT CMakeFiles/cmTC_8fdc9.dir/CMakeCXXCompilerABI.cpp.o -MF CMakeFiles/cmTC_8fdc9.dir/CMakeCXXCompilerABI.cpp.o.d -o CMakeFiles/cmTC_8fdc9.dir/CMakeCXXCompilerABI.cpp.o -c /usr/share/cmake/Modules/CMakeCXXCompilerABI.cpp
+        clang version 18.1.8 (Red Hat 18.1.8-1.module_el8.10.0+3903+ca21d481)
+        Target: x86_64-redhat-linux-gnu
+        Thread model: posix
+        InstalledDir: /usr/bin
+        Configuration file: /etc/clang/x86_64-redhat-linux-gnu.cfg
+        System configuration file directory: /etc/clang/
+        Found candidate GCC installation: /opt/rh/gcc-toolset-13/root/usr/lib/gcc/x86_64-redhat-linux/13
+        Selected GCC installation: /opt/rh/gcc-toolset-13/root/usr/lib/gcc/x86_64-redhat-linux/13
+        Candidate multilib: .;@m64
+        Candidate multilib: 32;@m32
+        Selected multilib: .;@m64
+         (in-process)
+         "/usr/bin/clang++" -cc1 -triple x86_64-redhat-linux-gnu -emit-obj -mrelax-all -disable-free -clear-ast-before-backend -disable-llvm-verifier -discard-value-names -main-file-name CMakeCXXCompilerABI.cpp -mrelocation-model static -mframe-pointer=all -fmath-errno -ffp-contract=on -fno-rounding-math -mconstructor-aliases -funwind-tables=2 -target-cpu x86-64 -tune-cpu generic -dwarf-version=4 -debugger-tuning=gdb -fdebug-compilation-dir=/home/agirjoaba/dynamatic4ml_fork/visual-dataflow/build/CMakeFiles/CMakeScratch/TryCompile-INTRrL -v -fcoverage-compilation-dir=/home/agirjoaba/dynamatic4ml_fork/visual-dataflow/build/CMakeFiles/CMakeScratch/TryCompile-INTRrL -resource-dir /usr/bin/../lib/clang/18 -internal-isystem /opt/rh/gcc-toolset-13/root/usr/lib/gcc/x86_64-redhat-linux/13/../../../../include/c++/13 -internal-isystem /opt/rh/gcc-toolset-13/root/usr/lib/gcc/x86_64-redhat-linux/13/../../../../include/c++/13/x86_64-redhat-linux -internal-isystem /opt/rh/gcc-toolset-13/root/usr/lib/gcc/x86_64-redhat-linux/13/../../../../include/c++/13/backward -internal-isystem /usr/bin/../lib/clang/18/include -internal-isystem /usr/local/include -internal-isystem /opt/rh/gcc-toolset-13/root/usr/lib/gcc/x86_64-redhat-linux/13/../../../../x86_64-redhat-linux/include -internal-externc-isystem /include -internal-externc-isystem /usr/include -fdeprecated-macro -ferror-limit 19 -fgnuc-version=4.2.1 -fskip-odr-check-in-gmf -fcxx-exceptions -fexceptions -faddrsig -D__GCC_HAVE_DWARF2_CFI_ASM=1 -o CMakeFiles/cmTC_8fdc9.dir/CMakeCXXCompilerABI.cpp.o -x c++ /usr/share/cmake/Modules/CMakeCXXCompilerABI.cpp
+        clang -cc1 version 18.1.8 based upon LLVM 18.1.8 default target x86_64-redhat-linux-gnu
+        ignoring nonexistent directory "/opt/rh/gcc-toolset-13/root/usr/lib/gcc/x86_64-redhat-linux/13/../../../../x86_64-redhat-linux/include"
+        ignoring nonexistent directory "/include"
+        #include "..." search starts here:
+        #include <...> search starts here:
+         /opt/rh/gcc-toolset-13/root/usr/lib/gcc/x86_64-redhat-linux/13/../../../../include/c++/13
+         /opt/rh/gcc-toolset-13/root/usr/lib/gcc/x86_64-redhat-linux/13/../../../../include/c++/13/x86_64-redhat-linux
+         /opt/rh/gcc-toolset-13/root/usr/lib/gcc/x86_64-redhat-linux/13/../../../../include/c++/13/backward
+         /usr/bin/../lib/clang/18/include
+         /usr/local/include
+         /usr/include
+        End of search list.
+        [2/2] : && /usr/lib64/ccache/clang++  -v CMakeFiles/cmTC_8fdc9.dir/CMakeCXXCompilerABI.cpp.o -o cmTC_8fdc9   && :
+        clang version 18.1.8 (Red Hat 18.1.8-1.module_el8.10.0+3903+ca21d481)
+        Target: x86_64-redhat-linux-gnu
+        Thread model: posix
+        InstalledDir: /usr/bin
+        Configuration file: /etc/clang/x86_64-redhat-linux-gnu.cfg
+        System configuration file directory: /etc/clang/
+        Found candidate GCC installation: /opt/rh/gcc-toolset-13/root/usr/lib/gcc/x86_64-redhat-linux/13
+        Selected GCC installation: /opt/rh/gcc-toolset-13/root/usr/lib/gcc/x86_64-redhat-linux/13
+        Candidate multilib: .;@m64
+        Candidate multilib: 32;@m32
+        Selected multilib: .;@m64
+         "/usr/bin/ld" --hash-style=gnu --build-id --eh-frame-hdr -m elf_x86_64 -dynamic-linker /lib64/ld-linux-x86-64.so.2 -o cmTC_8fdc9 /lib/../lib64/crt1.o /lib/../lib64/crti.o /opt/rh/gcc-toolset-13/root/usr/lib/gcc/x86_64-redhat-linux/13/crtbegin.o -L/usr/bin/../lib/clang/18/lib/x86_64-redhat-linux-gnu -L/opt/rh/gcc-toolset-13/root/usr/lib/gcc/x86_64-redhat-linux/13 -L/opt/rh/gcc-toolset-13/root/usr/lib/gcc/x86_64-redhat-linux/13/../../../../lib64 -L/lib/../lib64 -L/usr/lib/../lib64 -L/lib -L/usr/lib CMakeFiles/cmTC_8fdc9.dir/CMakeCXXCompilerABI.cpp.o -lstdc++ -lm -lgcc_s -lgcc -lc -lgcc_s -lgcc /opt/rh/gcc-toolset-13/root/usr/lib/gcc/x86_64-redhat-linux/13/crtend.o /lib/../lib64/crtn.o
+        
+      exitCode: 0
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/usr/share/cmake/Modules/CMakeDetermineCompilerABI.cmake:127 (message)"
+      - "/usr/share/cmake/Modules/CMakeTestCXXCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:6 (project)"
+    message: |
+      Parsed CXX implicit include dir info: rv=done
+        found start of include info
+        found start of implicit include info
+          add: [/opt/rh/gcc-toolset-13/root/usr/lib/gcc/x86_64-redhat-linux/13/../../../../include/c++/13]
+          add: [/opt/rh/gcc-toolset-13/root/usr/lib/gcc/x86_64-redhat-linux/13/../../../../include/c++/13/x86_64-redhat-linux]
+          add: [/opt/rh/gcc-toolset-13/root/usr/lib/gcc/x86_64-redhat-linux/13/../../../../include/c++/13/backward]
+          add: [/usr/bin/../lib/clang/18/include]
+          add: [/usr/local/include]
+          add: [/usr/include]
+        end of search list found
+        collapse include dir [/opt/rh/gcc-toolset-13/root/usr/lib/gcc/x86_64-redhat-linux/13/../../../../include/c++/13] ==> [/opt/rh/gcc-toolset-13/root/usr/include/c++/13]
+        collapse include dir [/opt/rh/gcc-toolset-13/root/usr/lib/gcc/x86_64-redhat-linux/13/../../../../include/c++/13/x86_64-redhat-linux] ==> [/opt/rh/gcc-toolset-13/root/usr/include/c++/13/x86_64-redhat-linux]
+        collapse include dir [/opt/rh/gcc-toolset-13/root/usr/lib/gcc/x86_64-redhat-linux/13/../../../../include/c++/13/backward] ==> [/opt/rh/gcc-toolset-13/root/usr/include/c++/13/backward]
+        collapse include dir [/usr/bin/../lib/clang/18/include] ==> [/usr/lib/clang/18/include]
+        collapse include dir [/usr/local/include] ==> [/usr/local/include]
+        collapse include dir [/usr/include] ==> [/usr/include]
+        implicit include dirs: [/opt/rh/gcc-toolset-13/root/usr/include/c++/13;/opt/rh/gcc-toolset-13/root/usr/include/c++/13/x86_64-redhat-linux;/opt/rh/gcc-toolset-13/root/usr/include/c++/13/backward;/usr/lib/clang/18/include;/usr/local/include;/usr/include]
+      
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/usr/share/cmake/Modules/CMakeDetermineCompilerABI.cmake:152 (message)"
+      - "/usr/share/cmake/Modules/CMakeTestCXXCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:6 (project)"
+    message: |
+      Parsed CXX implicit link information:
+        link line regex: [^( *|.*[/\\])(ld\\.lld|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\\]+-)?ld|collect2)[^/\\]*( |$)]
+        ignore line: [Change Dir: /home/agirjoaba/dynamatic4ml_fork/visual-dataflow/build/CMakeFiles/CMakeScratch/TryCompile-INTRrL]
+        ignore line: []
+        ignore line: [Run Build Command(s):/usr/bin/ninja-build -v cmTC_8fdc9 && [1/2] /usr/lib64/ccache/clang++   -v -MD -MT CMakeFiles/cmTC_8fdc9.dir/CMakeCXXCompilerABI.cpp.o -MF CMakeFiles/cmTC_8fdc9.dir/CMakeCXXCompilerABI.cpp.o.d -o CMakeFiles/cmTC_8fdc9.dir/CMakeCXXCompilerABI.cpp.o -c /usr/share/cmake/Modules/CMakeCXXCompilerABI.cpp]
+        ignore line: [clang version 18.1.8 (Red Hat 18.1.8-1.module_el8.10.0+3903+ca21d481)]
+        ignore line: [Target: x86_64-redhat-linux-gnu]
+        ignore line: [Thread model: posix]
+        ignore line: [InstalledDir: /usr/bin]
+        ignore line: [Configuration file: /etc/clang/x86_64-redhat-linux-gnu.cfg]
+        ignore line: [System configuration file directory: /etc/clang/]
+        ignore line: [Found candidate GCC installation: /opt/rh/gcc-toolset-13/root/usr/lib/gcc/x86_64-redhat-linux/13]
+        ignore line: [Selected GCC installation: /opt/rh/gcc-toolset-13/root/usr/lib/gcc/x86_64-redhat-linux/13]
+        ignore line: [Candidate multilib: .]
+        ignore line: [@m64]
+        ignore line: [Candidate multilib: 32]
+        ignore line: [@m32]
+        ignore line: [Selected multilib: .]
+        ignore line: [@m64]
+        ignore line: [ (in-process)]
+        ignore line: [ "/usr/bin/clang++" -cc1 -triple x86_64-redhat-linux-gnu -emit-obj -mrelax-all -disable-free -clear-ast-before-backend -disable-llvm-verifier -discard-value-names -main-file-name CMakeCXXCompilerABI.cpp -mrelocation-model static -mframe-pointer=all -fmath-errno -ffp-contract=on -fno-rounding-math -mconstructor-aliases -funwind-tables=2 -target-cpu x86-64 -tune-cpu generic -dwarf-version=4 -debugger-tuning=gdb -fdebug-compilation-dir=/home/agirjoaba/dynamatic4ml_fork/visual-dataflow/build/CMakeFiles/CMakeScratch/TryCompile-INTRrL -v -fcoverage-compilation-dir=/home/agirjoaba/dynamatic4ml_fork/visual-dataflow/build/CMakeFiles/CMakeScratch/TryCompile-INTRrL -resource-dir /usr/bin/../lib/clang/18 -internal-isystem /opt/rh/gcc-toolset-13/root/usr/lib/gcc/x86_64-redhat-linux/13/../../../../include/c++/13 -internal-isystem /opt/rh/gcc-toolset-13/root/usr/lib/gcc/x86_64-redhat-linux/13/../../../../include/c++/13/x86_64-redhat-linux -internal-isystem /opt/rh/gcc-toolset-13/root/usr/lib/gcc/x86_64-redhat-linux/13/../../../../include/c++/13/backward -internal-isystem /usr/bin/../lib/clang/18/include -internal-isystem /usr/local/include -internal-isystem /opt/rh/gcc-toolset-13/root/usr/lib/gcc/x86_64-redhat-linux/13/../../../../x86_64-redhat-linux/include -internal-externc-isystem /include -internal-externc-isystem /usr/include -fdeprecated-macro -ferror-limit 19 -fgnuc-version=4.2.1 -fskip-odr-check-in-gmf -fcxx-exceptions -fexceptions -faddrsig -D__GCC_HAVE_DWARF2_CFI_ASM=1 -o CMakeFiles/cmTC_8fdc9.dir/CMakeCXXCompilerABI.cpp.o -x c++ /usr/share/cmake/Modules/CMakeCXXCompilerABI.cpp]
+        ignore line: [clang -cc1 version 18.1.8 based upon LLVM 18.1.8 default target x86_64-redhat-linux-gnu]
+        ignore line: [ignoring nonexistent directory "/opt/rh/gcc-toolset-13/root/usr/lib/gcc/x86_64-redhat-linux/13/../../../../x86_64-redhat-linux/include"]
+        ignore line: [ignoring nonexistent directory "/include"]
+        ignore line: [#include "..." search starts here:]
+        ignore line: [#include <...> search starts here:]
+        ignore line: [ /opt/rh/gcc-toolset-13/root/usr/lib/gcc/x86_64-redhat-linux/13/../../../../include/c++/13]
+        ignore line: [ /opt/rh/gcc-toolset-13/root/usr/lib/gcc/x86_64-redhat-linux/13/../../../../include/c++/13/x86_64-redhat-linux]
+        ignore line: [ /opt/rh/gcc-toolset-13/root/usr/lib/gcc/x86_64-redhat-linux/13/../../../../include/c++/13/backward]
+        ignore line: [ /usr/bin/../lib/clang/18/include]
+        ignore line: [ /usr/local/include]
+        ignore line: [ /usr/include]
+        ignore line: [End of search list.]
+        ignore line: [[2/2] : && /usr/lib64/ccache/clang++  -v CMakeFiles/cmTC_8fdc9.dir/CMakeCXXCompilerABI.cpp.o -o cmTC_8fdc9   && :]
+        ignore line: [clang version 18.1.8 (Red Hat 18.1.8-1.module_el8.10.0+3903+ca21d481)]
+        ignore line: [Target: x86_64-redhat-linux-gnu]
+        ignore line: [Thread model: posix]
+        ignore line: [InstalledDir: /usr/bin]
+        ignore line: [Configuration file: /etc/clang/x86_64-redhat-linux-gnu.cfg]
+        ignore line: [System configuration file directory: /etc/clang/]
+        ignore line: [Found candidate GCC installation: /opt/rh/gcc-toolset-13/root/usr/lib/gcc/x86_64-redhat-linux/13]
+        ignore line: [Selected GCC installation: /opt/rh/gcc-toolset-13/root/usr/lib/gcc/x86_64-redhat-linux/13]
+        ignore line: [Candidate multilib: .]
+        ignore line: [@m64]
+        ignore line: [Candidate multilib: 32]
+        ignore line: [@m32]
+        ignore line: [Selected multilib: .]
+        ignore line: [@m64]
+        link line: [ "/usr/bin/ld" --hash-style=gnu --build-id --eh-frame-hdr -m elf_x86_64 -dynamic-linker /lib64/ld-linux-x86-64.so.2 -o cmTC_8fdc9 /lib/../lib64/crt1.o /lib/../lib64/crti.o /opt/rh/gcc-toolset-13/root/usr/lib/gcc/x86_64-redhat-linux/13/crtbegin.o -L/usr/bin/../lib/clang/18/lib/x86_64-redhat-linux-gnu -L/opt/rh/gcc-toolset-13/root/usr/lib/gcc/x86_64-redhat-linux/13 -L/opt/rh/gcc-toolset-13/root/usr/lib/gcc/x86_64-redhat-linux/13/../../../../lib64 -L/lib/../lib64 -L/usr/lib/../lib64 -L/lib -L/usr/lib CMakeFiles/cmTC_8fdc9.dir/CMakeCXXCompilerABI.cpp.o -lstdc++ -lm -lgcc_s -lgcc -lc -lgcc_s -lgcc /opt/rh/gcc-toolset-13/root/usr/lib/gcc/x86_64-redhat-linux/13/crtend.o /lib/../lib64/crtn.o]
+          arg [/usr/bin/ld] ==> ignore
+          arg [--hash-style=gnu] ==> ignore
+          arg [--build-id] ==> ignore
+          arg [--eh-frame-hdr] ==> ignore
+          arg [-m] ==> ignore
+          arg [elf_x86_64] ==> ignore
+          arg [-dynamic-linker] ==> ignore
+          arg [/lib64/ld-linux-x86-64.so.2] ==> ignore
+          arg [-o] ==> ignore
+          arg [cmTC_8fdc9] ==> ignore
+          arg [/lib/../lib64/crt1.o] ==> obj [/lib/../lib64/crt1.o]
+          arg [/lib/../lib64/crti.o] ==> obj [/lib/../lib64/crti.o]
+          arg [/opt/rh/gcc-toolset-13/root/usr/lib/gcc/x86_64-redhat-linux/13/crtbegin.o] ==> obj [/opt/rh/gcc-toolset-13/root/usr/lib/gcc/x86_64-redhat-linux/13/crtbegin.o]
+          arg [-L/usr/bin/../lib/clang/18/lib/x86_64-redhat-linux-gnu] ==> dir [/usr/bin/../lib/clang/18/lib/x86_64-redhat-linux-gnu]
+          arg [-L/opt/rh/gcc-toolset-13/root/usr/lib/gcc/x86_64-redhat-linux/13] ==> dir [/opt/rh/gcc-toolset-13/root/usr/lib/gcc/x86_64-redhat-linux/13]
+          arg [-L/opt/rh/gcc-toolset-13/root/usr/lib/gcc/x86_64-redhat-linux/13/../../../../lib64] ==> dir [/opt/rh/gcc-toolset-13/root/usr/lib/gcc/x86_64-redhat-linux/13/../../../../lib64]
+          arg [-L/lib/../lib64] ==> dir [/lib/../lib64]
+          arg [-L/usr/lib/../lib64] ==> dir [/usr/lib/../lib64]
+          arg [-L/lib] ==> dir [/lib]
+          arg [-L/usr/lib] ==> dir [/usr/lib]
+          arg [CMakeFiles/cmTC_8fdc9.dir/CMakeCXXCompilerABI.cpp.o] ==> ignore
+          arg [-lstdc++] ==> lib [stdc++]
+          arg [-lm] ==> lib [m]
+          arg [-lgcc_s] ==> lib [gcc_s]
+          arg [-lgcc] ==> lib [gcc]
+          arg [-lc] ==> lib [c]
+          arg [-lgcc_s] ==> lib [gcc_s]
+          arg [-lgcc] ==> lib [gcc]
+          arg [/opt/rh/gcc-toolset-13/root/usr/lib/gcc/x86_64-redhat-linux/13/crtend.o] ==> obj [/opt/rh/gcc-toolset-13/root/usr/lib/gcc/x86_64-redhat-linux/13/crtend.o]
+          arg [/lib/../lib64/crtn.o] ==> obj [/lib/../lib64/crtn.o]
+        collapse obj [/lib/../lib64/crt1.o] ==> [/lib64/crt1.o]
+        collapse obj [/lib/../lib64/crti.o] ==> [/lib64/crti.o]
+        collapse obj [/lib/../lib64/crtn.o] ==> [/lib64/crtn.o]
+        collapse library dir [/usr/bin/../lib/clang/18/lib/x86_64-redhat-linux-gnu] ==> [/usr/lib/clang/18/lib/x86_64-redhat-linux-gnu]
+        collapse library dir [/opt/rh/gcc-toolset-13/root/usr/lib/gcc/x86_64-redhat-linux/13] ==> [/opt/rh/gcc-toolset-13/root/usr/lib/gcc/x86_64-redhat-linux/13]
+        collapse library dir [/opt/rh/gcc-toolset-13/root/usr/lib/gcc/x86_64-redhat-linux/13/../../../../lib64] ==> [/opt/rh/gcc-toolset-13/root/usr/lib64]
+        collapse library dir [/lib/../lib64] ==> [/lib64]
+        collapse library dir [/usr/lib/../lib64] ==> [/usr/lib64]
+        collapse library dir [/lib] ==> [/lib]
+        collapse library dir [/usr/lib] ==> [/usr/lib]
+        implicit libs: [stdc++;m;gcc_s;gcc;c;gcc_s;gcc]
+        implicit objs: [/lib64/crt1.o;/lib64/crti.o;/opt/rh/gcc-toolset-13/root/usr/lib/gcc/x86_64-redhat-linux/13/crtbegin.o;/opt/rh/gcc-toolset-13/root/usr/lib/gcc/x86_64-redhat-linux/13/crtend.o;/lib64/crtn.o]
+        implicit dirs: [/usr/lib/clang/18/lib/x86_64-redhat-linux-gnu;/opt/rh/gcc-toolset-13/root/usr/lib/gcc/x86_64-redhat-linux/13;/opt/rh/gcc-toolset-13/root/usr/lib64;/lib64;/usr/lib64;/lib;/usr/lib]
+        implicit fwks: []
+      
+      
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/usr/share/cmake/Modules/CheckIncludeFile.cmake:95 (try_compile)"
+      - "/home/agirjoaba/dynamatic4ml_fork/polygeist/llvm-project/build/lib/cmake/llvm/FindLibEdit.cmake:28 (check_include_file)"
+      - "/home/agirjoaba/dynamatic4ml_fork/polygeist/llvm-project/build/lib/cmake/llvm/LLVMConfig.cmake:159 (find_package)"
+      - "/home/agirjoaba/dynamatic4ml_fork/polygeist/llvm-project/build/lib/cmake/mlir/MLIRConfig.cmake:6 (find_package)"
+      - "CMakeLists.txt:34 (find_package)"
+    checks:
+      - "Looking for histedit.h"
+    directories:
+      source: "/home/agirjoaba/dynamatic4ml_fork/visual-dataflow/build/CMakeFiles/CMakeScratch/TryCompile-dPtOTX"
+      binary: "/home/agirjoaba/dynamatic4ml_fork/visual-dataflow/build/CMakeFiles/CMakeScratch/TryCompile-dPtOTX"
+    cmakeVariables:
+      CMAKE_C_FLAGS: ""
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "/home/agirjoaba/dynamatic4ml_fork/polygeist/llvm-project/build/lib/cmake/llvm"
+    buildResult:
+      variable: "HAVE_HISTEDIT_H"
+      cached: true
+      stdout: |
+        Change Dir: /home/agirjoaba/dynamatic4ml_fork/visual-dataflow/build/CMakeFiles/CMakeScratch/TryCompile-dPtOTX
+        
+        Run Build Command(s):/usr/bin/ninja-build -v cmTC_47536 && [1/2] /usr/lib64/ccache/clang    -MD -MT CMakeFiles/cmTC_47536.dir/CheckIncludeFile.c.o -MF CMakeFiles/cmTC_47536.dir/CheckIncludeFile.c.o.d -o CMakeFiles/cmTC_47536.dir/CheckIncludeFile.c.o -c /home/agirjoaba/dynamatic4ml_fork/visual-dataflow/build/CMakeFiles/CMakeScratch/TryCompile-dPtOTX/CheckIncludeFile.c
+        [2/2] : && /usr/lib64/ccache/clang   CMakeFiles/cmTC_47536.dir/CheckIncludeFile.c.o -o cmTC_47536  /usr/lib64/libedit.so && :
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/usr/share/cmake/Modules/Internal/CheckSourceCompiles.cmake:101 (try_compile)"
+      - "/usr/share/cmake/Modules/CheckCSourceCompiles.cmake:76 (cmake_check_source_compiles)"
+      - "/home/agirjoaba/dynamatic4ml_fork/polygeist/llvm-project/build/lib/cmake/llvm/FindTerminfo.cmake:21 (check_c_source_compiles)"
+      - "/home/agirjoaba/dynamatic4ml_fork/polygeist/llvm-project/build/lib/cmake/llvm/LLVMConfig.cmake:164 (find_package)"
+      - "/home/agirjoaba/dynamatic4ml_fork/polygeist/llvm-project/build/lib/cmake/mlir/MLIRConfig.cmake:6 (find_package)"
+      - "CMakeLists.txt:34 (find_package)"
+    checks:
+      - "Performing Test Terminfo_LINKABLE"
+    directories:
+      source: "/home/agirjoaba/dynamatic4ml_fork/visual-dataflow/build/CMakeFiles/CMakeScratch/TryCompile-UcP9eg"
+      binary: "/home/agirjoaba/dynamatic4ml_fork/visual-dataflow/build/CMakeFiles/CMakeScratch/TryCompile-UcP9eg"
+    cmakeVariables:
+      CMAKE_C_FLAGS: ""
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "/home/agirjoaba/dynamatic4ml_fork/polygeist/llvm-project/build/lib/cmake/llvm"
+    buildResult:
+      variable: "Terminfo_LINKABLE"
+      cached: true
+      stdout: |
+        Change Dir: /home/agirjoaba/dynamatic4ml_fork/visual-dataflow/build/CMakeFiles/CMakeScratch/TryCompile-UcP9eg
+        
+        Run Build Command(s):/usr/bin/ninja-build -v cmTC_16c39 && [1/2] /usr/lib64/ccache/clang -DTerminfo_LINKABLE   -MD -MT CMakeFiles/cmTC_16c39.dir/src.c.o -MF CMakeFiles/cmTC_16c39.dir/src.c.o.d -o CMakeFiles/cmTC_16c39.dir/src.c.o -c /home/agirjoaba/dynamatic4ml_fork/visual-dataflow/build/CMakeFiles/CMakeScratch/TryCompile-UcP9eg/src.c
+        [2/2] : && /usr/lib64/ccache/clang   CMakeFiles/cmTC_16c39.dir/src.c.o -o cmTC_16c39  /usr/lib64/libtinfo.so && :
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/usr/share/cmake/Modules/Internal/CheckSourceCompiles.cmake:101 (try_compile)"
+      - "/usr/share/cmake/Modules/CheckCXXSourceCompiles.cmake:76 (cmake_check_source_compiles)"
+      - "/home/agirjoaba/dynamatic4ml_fork/polygeist/llvm-project/build/lib/cmake/llvm/CheckCompilerVersion.cmake:77 (check_cxx_source_compiles)"
+      - "/home/agirjoaba/dynamatic4ml_fork/polygeist/llvm-project/build/lib/cmake/llvm/HandleLLVMOptions.cmake:9 (include)"
+      - "CMakeLists.txt:45 (include)"
+    checks:
+      - "Performing Test LLVM_LIBSTDCXX_MIN"
+    directories:
+      source: "/home/agirjoaba/dynamatic4ml_fork/visual-dataflow/build/CMakeFiles/CMakeScratch/TryCompile-z0PUNn"
+      binary: "/home/agirjoaba/dynamatic4ml_fork/visual-dataflow/build/CMakeFiles/CMakeScratch/TryCompile-z0PUNn"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: " -fno-exceptions -fno-rtti"
+      CMAKE_CXX_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "/home/agirjoaba/dynamatic4ml_fork/polygeist/llvm-project/build/lib/cmake/llvm;/home/agirjoaba/dynamatic4ml_fork/polygeist/llvm-project/build/lib/cmake/mlir;/home/agirjoaba/dynamatic4ml_fork/polygeist/llvm-project/llvm/cmake/modules"
+    buildResult:
+      variable: "LLVM_LIBSTDCXX_MIN"
+      cached: true
+      stdout: |
+        Change Dir: /home/agirjoaba/dynamatic4ml_fork/visual-dataflow/build/CMakeFiles/CMakeScratch/TryCompile-z0PUNn
+        
+        Run Build Command(s):/usr/bin/ninja-build -v cmTC_152dc && [1/2] /usr/lib64/ccache/clang++ -DLLVM_LIBSTDCXX_MIN  -fno-exceptions -fno-rtti  -std=c++0x -std=gnu++17 -MD -MT CMakeFiles/cmTC_152dc.dir/src.cxx.o -MF CMakeFiles/cmTC_152dc.dir/src.cxx.o.d -o CMakeFiles/cmTC_152dc.dir/src.cxx.o -c /home/agirjoaba/dynamatic4ml_fork/visual-dataflow/build/CMakeFiles/CMakeScratch/TryCompile-z0PUNn/src.cxx
+        [2/2] : && /usr/lib64/ccache/clang++ -fno-exceptions -fno-rtti  -std=c++0x  CMakeFiles/cmTC_152dc.dir/src.cxx.o -o cmTC_152dc   && :
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/usr/share/cmake/Modules/Internal/CheckSourceCompiles.cmake:101 (try_compile)"
+      - "/usr/share/cmake/Modules/CheckCXXSourceCompiles.cmake:76 (cmake_check_source_compiles)"
+      - "/home/agirjoaba/dynamatic4ml_fork/polygeist/llvm-project/build/lib/cmake/llvm/CheckCompilerVersion.cmake:90 (check_cxx_source_compiles)"
+      - "/home/agirjoaba/dynamatic4ml_fork/polygeist/llvm-project/build/lib/cmake/llvm/HandleLLVMOptions.cmake:9 (include)"
+      - "CMakeLists.txt:45 (include)"
+    checks:
+      - "Performing Test LLVM_LIBSTDCXX_SOFT_ERROR"
+    directories:
+      source: "/home/agirjoaba/dynamatic4ml_fork/visual-dataflow/build/CMakeFiles/CMakeScratch/TryCompile-AlMLH5"
+      binary: "/home/agirjoaba/dynamatic4ml_fork/visual-dataflow/build/CMakeFiles/CMakeScratch/TryCompile-AlMLH5"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: " -fno-exceptions -fno-rtti"
+      CMAKE_CXX_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "/home/agirjoaba/dynamatic4ml_fork/polygeist/llvm-project/build/lib/cmake/llvm;/home/agirjoaba/dynamatic4ml_fork/polygeist/llvm-project/build/lib/cmake/mlir;/home/agirjoaba/dynamatic4ml_fork/polygeist/llvm-project/llvm/cmake/modules"
+    buildResult:
+      variable: "LLVM_LIBSTDCXX_SOFT_ERROR"
+      cached: true
+      stdout: |
+        Change Dir: /home/agirjoaba/dynamatic4ml_fork/visual-dataflow/build/CMakeFiles/CMakeScratch/TryCompile-AlMLH5
+        
+        Run Build Command(s):/usr/bin/ninja-build -v cmTC_fca9b && [1/2] /usr/lib64/ccache/clang++ -DLLVM_LIBSTDCXX_SOFT_ERROR  -fno-exceptions -fno-rtti  -std=c++0x -std=gnu++17 -MD -MT CMakeFiles/cmTC_fca9b.dir/src.cxx.o -MF CMakeFiles/cmTC_fca9b.dir/src.cxx.o.d -o CMakeFiles/cmTC_fca9b.dir/src.cxx.o -c /home/agirjoaba/dynamatic4ml_fork/visual-dataflow/build/CMakeFiles/CMakeScratch/TryCompile-AlMLH5/src.cxx
+        [2/2] : && /usr/lib64/ccache/clang++ -fno-exceptions -fno-rtti  -std=c++0x  CMakeFiles/cmTC_fca9b.dir/src.cxx.o -o cmTC_fca9b   && :
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/usr/share/cmake/Modules/Internal/CheckSourceCompiles.cmake:101 (try_compile)"
+      - "/usr/share/cmake/Modules/Internal/CheckCompilerFlag.cmake:18 (cmake_check_source_compiles)"
+      - "/usr/share/cmake/Modules/CheckCCompilerFlag.cmake:40 (cmake_check_compiler_flag)"
+      - "/home/agirjoaba/dynamatic4ml_fork/polygeist/llvm-project/build/lib/cmake/llvm/HandleLLVMOptions.cmake:277 (check_c_compiler_flag)"
+      - "/home/agirjoaba/dynamatic4ml_fork/polygeist/llvm-project/build/lib/cmake/llvm/HandleLLVMOptions.cmake:342 (add_flag_or_print_warning)"
+      - "CMakeLists.txt:45 (include)"
+    checks:
+      - "Performing Test C_SUPPORTS_FPIC"
+    directories:
+      source: "/home/agirjoaba/dynamatic4ml_fork/visual-dataflow/build/CMakeFiles/CMakeScratch/TryCompile-5HPYbk"
+      binary: "/home/agirjoaba/dynamatic4ml_fork/visual-dataflow/build/CMakeFiles/CMakeScratch/TryCompile-5HPYbk"
+    cmakeVariables:
+      CMAKE_C_FLAGS: ""
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "/home/agirjoaba/dynamatic4ml_fork/polygeist/llvm-project/build/lib/cmake/llvm;/home/agirjoaba/dynamatic4ml_fork/polygeist/llvm-project/build/lib/cmake/mlir;/home/agirjoaba/dynamatic4ml_fork/polygeist/llvm-project/llvm/cmake/modules"
+    buildResult:
+      variable: "C_SUPPORTS_FPIC"
+      cached: true
+      stdout: |
+        Change Dir: /home/agirjoaba/dynamatic4ml_fork/visual-dataflow/build/CMakeFiles/CMakeScratch/TryCompile-5HPYbk
+        
+        Run Build Command(s):/usr/bin/ninja-build -v cmTC_7ffd6 && [1/2] /usr/lib64/ccache/clang -DC_SUPPORTS_FPIC  -Werror -fPIC -MD -MT CMakeFiles/cmTC_7ffd6.dir/src.c.o -MF CMakeFiles/cmTC_7ffd6.dir/src.c.o.d -o CMakeFiles/cmTC_7ffd6.dir/src.c.o -c /home/agirjoaba/dynamatic4ml_fork/visual-dataflow/build/CMakeFiles/CMakeScratch/TryCompile-5HPYbk/src.c
+        [2/2] : && /usr/lib64/ccache/clang   CMakeFiles/cmTC_7ffd6.dir/src.c.o -o cmTC_7ffd6   && :
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/usr/share/cmake/Modules/Internal/CheckSourceCompiles.cmake:101 (try_compile)"
+      - "/usr/share/cmake/Modules/Internal/CheckCompilerFlag.cmake:18 (cmake_check_source_compiles)"
+      - "/usr/share/cmake/Modules/CheckCXXCompilerFlag.cmake:40 (cmake_check_compiler_flag)"
+      - "/home/agirjoaba/dynamatic4ml_fork/polygeist/llvm-project/build/lib/cmake/llvm/HandleLLVMOptions.cmake:278 (check_cxx_compiler_flag)"
+      - "/home/agirjoaba/dynamatic4ml_fork/polygeist/llvm-project/build/lib/cmake/llvm/HandleLLVMOptions.cmake:342 (add_flag_or_print_warning)"
+      - "CMakeLists.txt:45 (include)"
+    checks:
+      - "Performing Test CXX_SUPPORTS_FPIC"
+    directories:
+      source: "/home/agirjoaba/dynamatic4ml_fork/visual-dataflow/build/CMakeFiles/CMakeScratch/TryCompile-W1M2YJ"
+      binary: "/home/agirjoaba/dynamatic4ml_fork/visual-dataflow/build/CMakeFiles/CMakeScratch/TryCompile-W1M2YJ"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: " -fno-exceptions -fno-rtti"
+      CMAKE_CXX_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "/home/agirjoaba/dynamatic4ml_fork/polygeist/llvm-project/build/lib/cmake/llvm;/home/agirjoaba/dynamatic4ml_fork/polygeist/llvm-project/build/lib/cmake/mlir;/home/agirjoaba/dynamatic4ml_fork/polygeist/llvm-project/llvm/cmake/modules"
+    buildResult:
+      variable: "CXX_SUPPORTS_FPIC"
+      cached: true
+      stdout: |
+        Change Dir: /home/agirjoaba/dynamatic4ml_fork/visual-dataflow/build/CMakeFiles/CMakeScratch/TryCompile-W1M2YJ
+        
+        Run Build Command(s):/usr/bin/ninja-build -v cmTC_5c37f && [1/2] /usr/lib64/ccache/clang++ -DCXX_SUPPORTS_FPIC  -fno-exceptions -fno-rtti  -std=gnu++17   -Werror -fPIC -MD -MT CMakeFiles/cmTC_5c37f.dir/src.cxx.o -MF CMakeFiles/cmTC_5c37f.dir/src.cxx.o.d -o CMakeFiles/cmTC_5c37f.dir/src.cxx.o -c /home/agirjoaba/dynamatic4ml_fork/visual-dataflow/build/CMakeFiles/CMakeScratch/TryCompile-W1M2YJ/src.cxx
+        [2/2] : && /usr/lib64/ccache/clang++ -fno-exceptions -fno-rtti  CMakeFiles/cmTC_5c37f.dir/src.cxx.o -o cmTC_5c37f   && :
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/usr/share/cmake/Modules/Internal/CheckSourceCompiles.cmake:101 (try_compile)"
+      - "/usr/share/cmake/Modules/Internal/CheckCompilerFlag.cmake:18 (cmake_check_source_compiles)"
+      - "/usr/share/cmake/Modules/CheckCCompilerFlag.cmake:40 (cmake_check_compiler_flag)"
+      - "/home/agirjoaba/dynamatic4ml_fork/polygeist/llvm-project/build/lib/cmake/llvm/HandleLLVMOptions.cmake:270 (check_c_compiler_flag)"
+      - "/home/agirjoaba/dynamatic4ml_fork/polygeist/llvm-project/build/lib/cmake/llvm/HandleLLVMOptions.cmake:353 (add_flag_if_supported)"
+      - "CMakeLists.txt:45 (include)"
+    checks:
+      - "Performing Test C_SUPPORTS_FNO_SEMANTIC_INTERPOSITION"
+    directories:
+      source: "/home/agirjoaba/dynamatic4ml_fork/visual-dataflow/build/CMakeFiles/CMakeScratch/TryCompile-cPiSYP"
+      binary: "/home/agirjoaba/dynamatic4ml_fork/visual-dataflow/build/CMakeFiles/CMakeScratch/TryCompile-cPiSYP"
+    cmakeVariables:
+      CMAKE_C_FLAGS: " -fPIC"
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "/home/agirjoaba/dynamatic4ml_fork/polygeist/llvm-project/build/lib/cmake/llvm;/home/agirjoaba/dynamatic4ml_fork/polygeist/llvm-project/build/lib/cmake/mlir;/home/agirjoaba/dynamatic4ml_fork/polygeist/llvm-project/llvm/cmake/modules"
+    buildResult:
+      variable: "C_SUPPORTS_FNO_SEMANTIC_INTERPOSITION"
+      cached: true
+      stdout: |
+        Change Dir: /home/agirjoaba/dynamatic4ml_fork/visual-dataflow/build/CMakeFiles/CMakeScratch/TryCompile-cPiSYP
+        
+        Run Build Command(s):/usr/bin/ninja-build -v cmTC_c9e7a && [1/2] /usr/lib64/ccache/clang -DC_SUPPORTS_FNO_SEMANTIC_INTERPOSITION  -fPIC    -Werror -fno-semantic-interposition -MD -MT CMakeFiles/cmTC_c9e7a.dir/src.c.o -MF CMakeFiles/cmTC_c9e7a.dir/src.c.o.d -o CMakeFiles/cmTC_c9e7a.dir/src.c.o -c /home/agirjoaba/dynamatic4ml_fork/visual-dataflow/build/CMakeFiles/CMakeScratch/TryCompile-cPiSYP/src.c
+        [2/2] : && /usr/lib64/ccache/clang -fPIC  CMakeFiles/cmTC_c9e7a.dir/src.c.o -o cmTC_c9e7a   && :
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/usr/share/cmake/Modules/Internal/CheckSourceCompiles.cmake:101 (try_compile)"
+      - "/usr/share/cmake/Modules/Internal/CheckCompilerFlag.cmake:18 (cmake_check_source_compiles)"
+      - "/usr/share/cmake/Modules/CheckCXXCompilerFlag.cmake:40 (cmake_check_compiler_flag)"
+      - "/home/agirjoaba/dynamatic4ml_fork/polygeist/llvm-project/build/lib/cmake/llvm/HandleLLVMOptions.cmake:272 (check_cxx_compiler_flag)"
+      - "/home/agirjoaba/dynamatic4ml_fork/polygeist/llvm-project/build/lib/cmake/llvm/HandleLLVMOptions.cmake:353 (add_flag_if_supported)"
+      - "CMakeLists.txt:45 (include)"
+    checks:
+      - "Performing Test CXX_SUPPORTS_FNO_SEMANTIC_INTERPOSITION"
+    directories:
+      source: "/home/agirjoaba/dynamatic4ml_fork/visual-dataflow/build/CMakeFiles/CMakeScratch/TryCompile-nI8O7C"
+      binary: "/home/agirjoaba/dynamatic4ml_fork/visual-dataflow/build/CMakeFiles/CMakeScratch/TryCompile-nI8O7C"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: " -fno-exceptions -fno-rtti -fPIC"
+      CMAKE_CXX_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "/home/agirjoaba/dynamatic4ml_fork/polygeist/llvm-project/build/lib/cmake/llvm;/home/agirjoaba/dynamatic4ml_fork/polygeist/llvm-project/build/lib/cmake/mlir;/home/agirjoaba/dynamatic4ml_fork/polygeist/llvm-project/llvm/cmake/modules"
+    buildResult:
+      variable: "CXX_SUPPORTS_FNO_SEMANTIC_INTERPOSITION"
+      cached: true
+      stdout: |
+        Change Dir: /home/agirjoaba/dynamatic4ml_fork/visual-dataflow/build/CMakeFiles/CMakeScratch/TryCompile-nI8O7C
+        
+        Run Build Command(s):/usr/bin/ninja-build -v cmTC_64071 && [1/2] /usr/lib64/ccache/clang++ -DCXX_SUPPORTS_FNO_SEMANTIC_INTERPOSITION  -fno-exceptions -fno-rtti -fPIC  -std=gnu++17   -Werror -fno-semantic-interposition -MD -MT CMakeFiles/cmTC_64071.dir/src.cxx.o -MF CMakeFiles/cmTC_64071.dir/src.cxx.o.d -o CMakeFiles/cmTC_64071.dir/src.cxx.o -c /home/agirjoaba/dynamatic4ml_fork/visual-dataflow/build/CMakeFiles/CMakeScratch/TryCompile-nI8O7C/src.cxx
+        [2/2] : && /usr/lib64/ccache/clang++ -fno-exceptions -fno-rtti -fPIC  CMakeFiles/cmTC_64071.dir/src.cxx.o -o cmTC_64071   && :
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/usr/share/cmake/Modules/Internal/CheckSourceCompiles.cmake:101 (try_compile)"
+      - "/usr/share/cmake/Modules/Internal/CheckCompilerFlag.cmake:18 (cmake_check_source_compiles)"
+      - "/usr/share/cmake/Modules/CheckCXXCompilerFlag.cmake:40 (cmake_check_compiler_flag)"
+      - "/home/agirjoaba/dynamatic4ml_fork/polygeist/llvm-project/build/lib/cmake/llvm/HandleLLVMOptions.cmake:378 (check_cxx_compiler_flag)"
+      - "CMakeLists.txt:45 (include)"
+    checks:
+      - "Performing Test SUPPORTS_FVISIBILITY_INLINES_HIDDEN_FLAG"
+    directories:
+      source: "/home/agirjoaba/dynamatic4ml_fork/visual-dataflow/build/CMakeFiles/CMakeScratch/TryCompile-uB3eMS"
+      binary: "/home/agirjoaba/dynamatic4ml_fork/visual-dataflow/build/CMakeFiles/CMakeScratch/TryCompile-uB3eMS"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: " -fno-exceptions -fno-rtti -fPIC -fno-semantic-interposition"
+      CMAKE_CXX_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "/home/agirjoaba/dynamatic4ml_fork/polygeist/llvm-project/build/lib/cmake/llvm;/home/agirjoaba/dynamatic4ml_fork/polygeist/llvm-project/build/lib/cmake/mlir;/home/agirjoaba/dynamatic4ml_fork/polygeist/llvm-project/llvm/cmake/modules"
+    buildResult:
+      variable: "SUPPORTS_FVISIBILITY_INLINES_HIDDEN_FLAG"
+      cached: true
+      stdout: |
+        Change Dir: /home/agirjoaba/dynamatic4ml_fork/visual-dataflow/build/CMakeFiles/CMakeScratch/TryCompile-uB3eMS
+        
+        Run Build Command(s):/usr/bin/ninja-build -v cmTC_f8f90 && [1/2] /usr/lib64/ccache/clang++ -DSUPPORTS_FVISIBILITY_INLINES_HIDDEN_FLAG  -fno-exceptions -fno-rtti -fPIC -fno-semantic-interposition  -std=gnu++17   -fvisibility-inlines-hidden -MD -MT CMakeFiles/cmTC_f8f90.dir/src.cxx.o -MF CMakeFiles/cmTC_f8f90.dir/src.cxx.o.d -o CMakeFiles/cmTC_f8f90.dir/src.cxx.o -c /home/agirjoaba/dynamatic4ml_fork/visual-dataflow/build/CMakeFiles/CMakeScratch/TryCompile-uB3eMS/src.cxx
+        [2/2] : && /usr/lib64/ccache/clang++ -fno-exceptions -fno-rtti -fPIC -fno-semantic-interposition  CMakeFiles/cmTC_f8f90.dir/src.cxx.o -o cmTC_f8f90   && :
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/usr/share/cmake/Modules/Internal/CheckSourceCompiles.cmake:101 (try_compile)"
+      - "/usr/share/cmake/Modules/Internal/CheckCompilerFlag.cmake:18 (cmake_check_source_compiles)"
+      - "/usr/share/cmake/Modules/CheckCCompilerFlag.cmake:40 (cmake_check_compiler_flag)"
+      - "/home/agirjoaba/dynamatic4ml_fork/polygeist/llvm-project/build/lib/cmake/llvm/HandleLLVMOptions.cmake:270 (check_c_compiler_flag)"
+      - "/home/agirjoaba/dynamatic4ml_fork/polygeist/llvm-project/build/lib/cmake/llvm/HandleLLVMOptions.cmake:601 (add_flag_if_supported)"
+      - "CMakeLists.txt:45 (include)"
+    checks:
+      - "Performing Test C_SUPPORTS_WERROR_DATE_TIME"
+    directories:
+      source: "/home/agirjoaba/dynamatic4ml_fork/visual-dataflow/build/CMakeFiles/CMakeScratch/TryCompile-YI1qqV"
+      binary: "/home/agirjoaba/dynamatic4ml_fork/visual-dataflow/build/CMakeFiles/CMakeScratch/TryCompile-YI1qqV"
+    cmakeVariables:
+      CMAKE_C_FLAGS: " -fPIC -fno-semantic-interposition"
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "/home/agirjoaba/dynamatic4ml_fork/polygeist/llvm-project/build/lib/cmake/llvm;/home/agirjoaba/dynamatic4ml_fork/polygeist/llvm-project/build/lib/cmake/mlir;/home/agirjoaba/dynamatic4ml_fork/polygeist/llvm-project/llvm/cmake/modules"
+    buildResult:
+      variable: "C_SUPPORTS_WERROR_DATE_TIME"
+      cached: true
+      stdout: |
+        Change Dir: /home/agirjoaba/dynamatic4ml_fork/visual-dataflow/build/CMakeFiles/CMakeScratch/TryCompile-YI1qqV
+        
+        Run Build Command(s):/usr/bin/ninja-build -v cmTC_21cb8 && [1/2] /usr/lib64/ccache/clang -DC_SUPPORTS_WERROR_DATE_TIME  -fPIC -fno-semantic-interposition    -Werror -Werror=date-time -MD -MT CMakeFiles/cmTC_21cb8.dir/src.c.o -MF CMakeFiles/cmTC_21cb8.dir/src.c.o.d -o CMakeFiles/cmTC_21cb8.dir/src.c.o -c /home/agirjoaba/dynamatic4ml_fork/visual-dataflow/build/CMakeFiles/CMakeScratch/TryCompile-YI1qqV/src.c
+        [2/2] : && /usr/lib64/ccache/clang -fPIC -fno-semantic-interposition  CMakeFiles/cmTC_21cb8.dir/src.c.o -o cmTC_21cb8   && :
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/usr/share/cmake/Modules/Internal/CheckSourceCompiles.cmake:101 (try_compile)"
+      - "/usr/share/cmake/Modules/Internal/CheckCompilerFlag.cmake:18 (cmake_check_source_compiles)"
+      - "/usr/share/cmake/Modules/CheckCXXCompilerFlag.cmake:40 (cmake_check_compiler_flag)"
+      - "/home/agirjoaba/dynamatic4ml_fork/polygeist/llvm-project/build/lib/cmake/llvm/HandleLLVMOptions.cmake:272 (check_cxx_compiler_flag)"
+      - "/home/agirjoaba/dynamatic4ml_fork/polygeist/llvm-project/build/lib/cmake/llvm/HandleLLVMOptions.cmake:601 (add_flag_if_supported)"
+      - "CMakeLists.txt:45 (include)"
+    checks:
+      - "Performing Test CXX_SUPPORTS_WERROR_DATE_TIME"
+    directories:
+      source: "/home/agirjoaba/dynamatic4ml_fork/visual-dataflow/build/CMakeFiles/CMakeScratch/TryCompile-9XrWiB"
+      binary: "/home/agirjoaba/dynamatic4ml_fork/visual-dataflow/build/CMakeFiles/CMakeScratch/TryCompile-9XrWiB"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: " -fno-exceptions -fno-rtti -fPIC -fno-semantic-interposition -fvisibility-inlines-hidden"
+      CMAKE_CXX_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "/home/agirjoaba/dynamatic4ml_fork/polygeist/llvm-project/build/lib/cmake/llvm;/home/agirjoaba/dynamatic4ml_fork/polygeist/llvm-project/build/lib/cmake/mlir;/home/agirjoaba/dynamatic4ml_fork/polygeist/llvm-project/llvm/cmake/modules"
+    buildResult:
+      variable: "CXX_SUPPORTS_WERROR_DATE_TIME"
+      cached: true
+      stdout: |
+        Change Dir: /home/agirjoaba/dynamatic4ml_fork/visual-dataflow/build/CMakeFiles/CMakeScratch/TryCompile-9XrWiB
+        
+        Run Build Command(s):/usr/bin/ninja-build -v cmTC_72500 && [1/2] /usr/lib64/ccache/clang++ -DCXX_SUPPORTS_WERROR_DATE_TIME  -fno-exceptions -fno-rtti -fPIC -fno-semantic-interposition -fvisibility-inlines-hidden  -std=gnu++17   -Werror -Werror=date-time -MD -MT CMakeFiles/cmTC_72500.dir/src.cxx.o -MF CMakeFiles/cmTC_72500.dir/src.cxx.o.d -o CMakeFiles/cmTC_72500.dir/src.cxx.o -c /home/agirjoaba/dynamatic4ml_fork/visual-dataflow/build/CMakeFiles/CMakeScratch/TryCompile-9XrWiB/src.cxx
+        [2/2] : && /usr/lib64/ccache/clang++ -fno-exceptions -fno-rtti -fPIC -fno-semantic-interposition -fvisibility-inlines-hidden  CMakeFiles/cmTC_72500.dir/src.cxx.o -o cmTC_72500   && :
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/usr/share/cmake/Modules/Internal/CheckSourceCompiles.cmake:101 (try_compile)"
+      - "/usr/share/cmake/Modules/Internal/CheckCompilerFlag.cmake:18 (cmake_check_source_compiles)"
+      - "/usr/share/cmake/Modules/CheckCCompilerFlag.cmake:40 (cmake_check_compiler_flag)"
+      - "/home/agirjoaba/dynamatic4ml_fork/polygeist/llvm-project/build/lib/cmake/llvm/HandleLLVMOptions.cmake:270 (check_c_compiler_flag)"
+      - "/home/agirjoaba/dynamatic4ml_fork/polygeist/llvm-project/build/lib/cmake/llvm/HandleLLVMOptions.cmake:602 (add_flag_if_supported)"
+      - "CMakeLists.txt:45 (include)"
+    checks:
+      - "Performing Test C_SUPPORTS_WERROR_UNGUARDED_AVAILABILITY_NEW"
+    directories:
+      source: "/home/agirjoaba/dynamatic4ml_fork/visual-dataflow/build/CMakeFiles/CMakeScratch/TryCompile-tJhwWC"
+      binary: "/home/agirjoaba/dynamatic4ml_fork/visual-dataflow/build/CMakeFiles/CMakeScratch/TryCompile-tJhwWC"
+    cmakeVariables:
+      CMAKE_C_FLAGS: " -fPIC -fno-semantic-interposition -Werror=date-time"
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "/home/agirjoaba/dynamatic4ml_fork/polygeist/llvm-project/build/lib/cmake/llvm;/home/agirjoaba/dynamatic4ml_fork/polygeist/llvm-project/build/lib/cmake/mlir;/home/agirjoaba/dynamatic4ml_fork/polygeist/llvm-project/llvm/cmake/modules"
+    buildResult:
+      variable: "C_SUPPORTS_WERROR_UNGUARDED_AVAILABILITY_NEW"
+      cached: true
+      stdout: |
+        Change Dir: /home/agirjoaba/dynamatic4ml_fork/visual-dataflow/build/CMakeFiles/CMakeScratch/TryCompile-tJhwWC
+        
+        Run Build Command(s):/usr/bin/ninja-build -v cmTC_83bd4 && [1/2] /usr/lib64/ccache/clang -DC_SUPPORTS_WERROR_UNGUARDED_AVAILABILITY_NEW  -fPIC -fno-semantic-interposition -Werror=date-time    -Werror -Werror=unguarded-availability-new -MD -MT CMakeFiles/cmTC_83bd4.dir/src.c.o -MF CMakeFiles/cmTC_83bd4.dir/src.c.o.d -o CMakeFiles/cmTC_83bd4.dir/src.c.o -c /home/agirjoaba/dynamatic4ml_fork/visual-dataflow/build/CMakeFiles/CMakeScratch/TryCompile-tJhwWC/src.c
+        [2/2] : && /usr/lib64/ccache/clang -fPIC -fno-semantic-interposition -Werror=date-time  CMakeFiles/cmTC_83bd4.dir/src.c.o -o cmTC_83bd4   && :
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/usr/share/cmake/Modules/Internal/CheckSourceCompiles.cmake:101 (try_compile)"
+      - "/usr/share/cmake/Modules/Internal/CheckCompilerFlag.cmake:18 (cmake_check_source_compiles)"
+      - "/usr/share/cmake/Modules/CheckCXXCompilerFlag.cmake:40 (cmake_check_compiler_flag)"
+      - "/home/agirjoaba/dynamatic4ml_fork/polygeist/llvm-project/build/lib/cmake/llvm/HandleLLVMOptions.cmake:272 (check_cxx_compiler_flag)"
+      - "/home/agirjoaba/dynamatic4ml_fork/polygeist/llvm-project/build/lib/cmake/llvm/HandleLLVMOptions.cmake:602 (add_flag_if_supported)"
+      - "CMakeLists.txt:45 (include)"
+    checks:
+      - "Performing Test CXX_SUPPORTS_WERROR_UNGUARDED_AVAILABILITY_NEW"
+    directories:
+      source: "/home/agirjoaba/dynamatic4ml_fork/visual-dataflow/build/CMakeFiles/CMakeScratch/TryCompile-NmsvS3"
+      binary: "/home/agirjoaba/dynamatic4ml_fork/visual-dataflow/build/CMakeFiles/CMakeScratch/TryCompile-NmsvS3"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: " -fno-exceptions -fno-rtti -fPIC -fno-semantic-interposition -fvisibility-inlines-hidden -Werror=date-time"
+      CMAKE_CXX_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "/home/agirjoaba/dynamatic4ml_fork/polygeist/llvm-project/build/lib/cmake/llvm;/home/agirjoaba/dynamatic4ml_fork/polygeist/llvm-project/build/lib/cmake/mlir;/home/agirjoaba/dynamatic4ml_fork/polygeist/llvm-project/llvm/cmake/modules"
+    buildResult:
+      variable: "CXX_SUPPORTS_WERROR_UNGUARDED_AVAILABILITY_NEW"
+      cached: true
+      stdout: |
+        Change Dir: /home/agirjoaba/dynamatic4ml_fork/visual-dataflow/build/CMakeFiles/CMakeScratch/TryCompile-NmsvS3
+        
+        Run Build Command(s):/usr/bin/ninja-build -v cmTC_89869 && [1/2] /usr/lib64/ccache/clang++ -DCXX_SUPPORTS_WERROR_UNGUARDED_AVAILABILITY_NEW  -fno-exceptions -fno-rtti -fPIC -fno-semantic-interposition -fvisibility-inlines-hidden -Werror=date-time  -std=gnu++17   -Werror -Werror=unguarded-availability-new -MD -MT CMakeFiles/cmTC_89869.dir/src.cxx.o -MF CMakeFiles/cmTC_89869.dir/src.cxx.o.d -o CMakeFiles/cmTC_89869.dir/src.cxx.o -c /home/agirjoaba/dynamatic4ml_fork/visual-dataflow/build/CMakeFiles/CMakeScratch/TryCompile-NmsvS3/src.cxx
+        [2/2] : && /usr/lib64/ccache/clang++ -fno-exceptions -fno-rtti -fPIC -fno-semantic-interposition -fvisibility-inlines-hidden -Werror=date-time  CMakeFiles/cmTC_89869.dir/src.cxx.o -o cmTC_89869   && :
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/usr/share/cmake/Modules/Internal/CheckSourceCompiles.cmake:101 (try_compile)"
+      - "/usr/share/cmake/Modules/Internal/CheckCompilerFlag.cmake:18 (cmake_check_source_compiles)"
+      - "/usr/share/cmake/Modules/CheckCCompilerFlag.cmake:40 (cmake_check_compiler_flag)"
+      - "/home/agirjoaba/dynamatic4ml_fork/polygeist/llvm-project/build/lib/cmake/llvm/HandleLLVMOptions.cmake:270 (check_c_compiler_flag)"
+      - "/home/agirjoaba/dynamatic4ml_fork/polygeist/llvm-project/build/lib/cmake/llvm/HandleLLVMOptions.cmake:612 (add_flag_if_supported)"
+      - "CMakeLists.txt:45 (include)"
+    checks:
+      - "Performing Test C_SUPPORTS_CMAKE_CXX_FLAGS"
+    directories:
+      source: "/home/agirjoaba/dynamatic4ml_fork/visual-dataflow/build/CMakeFiles/CMakeScratch/TryCompile-0YWy79"
+      binary: "/home/agirjoaba/dynamatic4ml_fork/visual-dataflow/build/CMakeFiles/CMakeScratch/TryCompile-0YWy79"
+    cmakeVariables:
+      CMAKE_C_FLAGS: " -fPIC -fno-semantic-interposition -Werror=date-time -Werror=unguarded-availability-new"
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "/home/agirjoaba/dynamatic4ml_fork/polygeist/llvm-project/build/lib/cmake/llvm;/home/agirjoaba/dynamatic4ml_fork/polygeist/llvm-project/build/lib/cmake/mlir;/home/agirjoaba/dynamatic4ml_fork/polygeist/llvm-project/llvm/cmake/modules"
+    buildResult:
+      variable: "C_SUPPORTS_CMAKE_CXX_FLAGS"
+      cached: true
+      stdout: |
+        Change Dir: /home/agirjoaba/dynamatic4ml_fork/visual-dataflow/build/CMakeFiles/CMakeScratch/TryCompile-0YWy79
+        
+        Run Build Command(s):/usr/bin/ninja-build -v cmTC_73ca3 && [1/2] /usr/lib64/ccache/clang -DC_SUPPORTS_CMAKE_CXX_FLAGS  -fPIC -fno-semantic-interposition -Werror=date-time -Werror=unguarded-availability-new    -Werror -fno-lifetime-dse -MD -MT CMakeFiles/cmTC_73ca3.dir/src.c.o -MF CMakeFiles/cmTC_73ca3.dir/src.c.o.d -o CMakeFiles/cmTC_73ca3.dir/src.c.o -c /home/agirjoaba/dynamatic4ml_fork/visual-dataflow/build/CMakeFiles/CMakeScratch/TryCompile-0YWy79/src.c
+        FAILED: CMakeFiles/cmTC_73ca3.dir/src.c.o 
+        /usr/lib64/ccache/clang -DC_SUPPORTS_CMAKE_CXX_FLAGS  -fPIC -fno-semantic-interposition -Werror=date-time -Werror=unguarded-availability-new    -Werror -fno-lifetime-dse -MD -MT CMakeFiles/cmTC_73ca3.dir/src.c.o -MF CMakeFiles/cmTC_73ca3.dir/src.c.o.d -o CMakeFiles/cmTC_73ca3.dir/src.c.o -c /home/agirjoaba/dynamatic4ml_fork/visual-dataflow/build/CMakeFiles/CMakeScratch/TryCompile-0YWy79/src.c
+        clang: error: unknown argument: '-fno-lifetime-dse'
+        ninja: build stopped: subcommand failed.
+        
+      exitCode: 1
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/usr/share/cmake/Modules/Internal/CheckSourceCompiles.cmake:101 (try_compile)"
+      - "/usr/share/cmake/Modules/Internal/CheckCompilerFlag.cmake:18 (cmake_check_source_compiles)"
+      - "/usr/share/cmake/Modules/CheckCXXCompilerFlag.cmake:40 (cmake_check_compiler_flag)"
+      - "/home/agirjoaba/dynamatic4ml_fork/polygeist/llvm-project/build/lib/cmake/llvm/HandleLLVMOptions.cmake:272 (check_cxx_compiler_flag)"
+      - "/home/agirjoaba/dynamatic4ml_fork/polygeist/llvm-project/build/lib/cmake/llvm/HandleLLVMOptions.cmake:612 (add_flag_if_supported)"
+      - "CMakeLists.txt:45 (include)"
+    checks:
+      - "Performing Test CXX_SUPPORTS_CMAKE_CXX_FLAGS"
+    directories:
+      source: "/home/agirjoaba/dynamatic4ml_fork/visual-dataflow/build/CMakeFiles/CMakeScratch/TryCompile-NZmZUm"
+      binary: "/home/agirjoaba/dynamatic4ml_fork/visual-dataflow/build/CMakeFiles/CMakeScratch/TryCompile-NZmZUm"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: " -fno-exceptions -fno-rtti -fPIC -fno-semantic-interposition -fvisibility-inlines-hidden -Werror=date-time -Werror=unguarded-availability-new"
+      CMAKE_CXX_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "/home/agirjoaba/dynamatic4ml_fork/polygeist/llvm-project/build/lib/cmake/llvm;/home/agirjoaba/dynamatic4ml_fork/polygeist/llvm-project/build/lib/cmake/mlir;/home/agirjoaba/dynamatic4ml_fork/polygeist/llvm-project/llvm/cmake/modules"
+    buildResult:
+      variable: "CXX_SUPPORTS_CMAKE_CXX_FLAGS"
+      cached: true
+      stdout: |
+        Change Dir: /home/agirjoaba/dynamatic4ml_fork/visual-dataflow/build/CMakeFiles/CMakeScratch/TryCompile-NZmZUm
+        
+        Run Build Command(s):/usr/bin/ninja-build -v cmTC_439d8 && [1/2] /usr/lib64/ccache/clang++ -DCXX_SUPPORTS_CMAKE_CXX_FLAGS  -fno-exceptions -fno-rtti -fPIC -fno-semantic-interposition -fvisibility-inlines-hidden -Werror=date-time -Werror=unguarded-availability-new  -std=gnu++17   -Werror -fno-lifetime-dse -MD -MT CMakeFiles/cmTC_439d8.dir/src.cxx.o -MF CMakeFiles/cmTC_439d8.dir/src.cxx.o.d -o CMakeFiles/cmTC_439d8.dir/src.cxx.o -c /home/agirjoaba/dynamatic4ml_fork/visual-dataflow/build/CMakeFiles/CMakeScratch/TryCompile-NZmZUm/src.cxx
+        FAILED: CMakeFiles/cmTC_439d8.dir/src.cxx.o 
+        /usr/lib64/ccache/clang++ -DCXX_SUPPORTS_CMAKE_CXX_FLAGS  -fno-exceptions -fno-rtti -fPIC -fno-semantic-interposition -fvisibility-inlines-hidden -Werror=date-time -Werror=unguarded-availability-new  -std=gnu++17   -Werror -fno-lifetime-dse -MD -MT CMakeFiles/cmTC_439d8.dir/src.cxx.o -MF CMakeFiles/cmTC_439d8.dir/src.cxx.o.d -o CMakeFiles/cmTC_439d8.dir/src.cxx.o -c /home/agirjoaba/dynamatic4ml_fork/visual-dataflow/build/CMakeFiles/CMakeScratch/TryCompile-NZmZUm/src.cxx
+        clang++: error: unknown argument: '-fno-lifetime-dse'
+        ninja: build stopped: subcommand failed.
+        
+      exitCode: 1
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/usr/share/cmake/Modules/Internal/CheckSourceCompiles.cmake:101 (try_compile)"
+      - "/usr/share/cmake/Modules/Internal/CheckCompilerFlag.cmake:18 (cmake_check_source_compiles)"
+      - "/usr/share/cmake/Modules/CheckCXXCompilerFlag.cmake:40 (cmake_check_compiler_flag)"
+      - "/home/agirjoaba/dynamatic4ml_fork/polygeist/llvm-project/build/lib/cmake/llvm/HandleLLVMOptions.cmake:748 (check_cxx_compiler_flag)"
+      - "CMakeLists.txt:45 (include)"
+    checks:
+      - "Performing Test CXX_SUPPORTS_MISSING_FIELD_INITIALIZERS_FLAG"
+    directories:
+      source: "/home/agirjoaba/dynamatic4ml_fork/visual-dataflow/build/CMakeFiles/CMakeScratch/TryCompile-Q8lNy4"
+      binary: "/home/agirjoaba/dynamatic4ml_fork/visual-dataflow/build/CMakeFiles/CMakeScratch/TryCompile-Q8lNy4"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: " -fno-exceptions -fno-rtti -fPIC -fno-semantic-interposition -fvisibility-inlines-hidden -Werror=date-time -Werror=unguarded-availability-new -Wall -Wextra -Wno-unused-parameter -Wwrite-strings -Wcast-qual"
+      CMAKE_CXX_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "/home/agirjoaba/dynamatic4ml_fork/polygeist/llvm-project/build/lib/cmake/llvm;/home/agirjoaba/dynamatic4ml_fork/polygeist/llvm-project/build/lib/cmake/mlir;/home/agirjoaba/dynamatic4ml_fork/polygeist/llvm-project/llvm/cmake/modules"
+    buildResult:
+      variable: "CXX_SUPPORTS_MISSING_FIELD_INITIALIZERS_FLAG"
+      cached: true
+      stdout: |
+        Change Dir: /home/agirjoaba/dynamatic4ml_fork/visual-dataflow/build/CMakeFiles/CMakeScratch/TryCompile-Q8lNy4
+        
+        Run Build Command(s):/usr/bin/ninja-build -v cmTC_78d73 && [1/2] /usr/lib64/ccache/clang++ -DCXX_SUPPORTS_MISSING_FIELD_INITIALIZERS_FLAG  -fno-exceptions -fno-rtti -fPIC -fno-semantic-interposition -fvisibility-inlines-hidden -Werror=date-time -Werror=unguarded-availability-new -Wall -Wextra -Wno-unused-parameter -Wwrite-strings -Wcast-qual  -std=gnu++17   -Wmissing-field-initializers -MD -MT CMakeFiles/cmTC_78d73.dir/src.cxx.o -MF CMakeFiles/cmTC_78d73.dir/src.cxx.o.d -o CMakeFiles/cmTC_78d73.dir/src.cxx.o -c /home/agirjoaba/dynamatic4ml_fork/visual-dataflow/build/CMakeFiles/CMakeScratch/TryCompile-Q8lNy4/src.cxx
+        [2/2] : && /usr/lib64/ccache/clang++ -fno-exceptions -fno-rtti -fPIC -fno-semantic-interposition -fvisibility-inlines-hidden -Werror=date-time -Werror=unguarded-availability-new -Wall -Wextra -Wno-unused-parameter -Wwrite-strings -Wcast-qual  CMakeFiles/cmTC_78d73.dir/src.cxx.o -o cmTC_78d73   && :
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/usr/share/cmake/Modules/Internal/CheckSourceCompiles.cmake:101 (try_compile)"
+      - "/usr/share/cmake/Modules/Internal/CheckCompilerFlag.cmake:18 (cmake_check_source_compiles)"
+      - "/usr/share/cmake/Modules/CheckCCompilerFlag.cmake:40 (cmake_check_compiler_flag)"
+      - "/home/agirjoaba/dynamatic4ml_fork/polygeist/llvm-project/build/lib/cmake/llvm/HandleLLVMOptions.cmake:270 (check_c_compiler_flag)"
+      - "/home/agirjoaba/dynamatic4ml_fork/polygeist/llvm-project/build/lib/cmake/llvm/HandleLLVMOptions.cmake:767 (add_flag_if_supported)"
+      - "CMakeLists.txt:45 (include)"
+    checks:
+      - "Performing Test C_SUPPORTS_IMPLICIT_FALLTHROUGH_FLAG"
+    directories:
+      source: "/home/agirjoaba/dynamatic4ml_fork/visual-dataflow/build/CMakeFiles/CMakeScratch/TryCompile-WUZpIF"
+      binary: "/home/agirjoaba/dynamatic4ml_fork/visual-dataflow/build/CMakeFiles/CMakeScratch/TryCompile-WUZpIF"
+    cmakeVariables:
+      CMAKE_C_FLAGS: " -fPIC -fno-semantic-interposition -Werror=date-time -Werror=unguarded-availability-new -Wall -Wextra -Wno-unused-parameter -Wwrite-strings -Wcast-qual -Wmissing-field-initializers"
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "/home/agirjoaba/dynamatic4ml_fork/polygeist/llvm-project/build/lib/cmake/llvm;/home/agirjoaba/dynamatic4ml_fork/polygeist/llvm-project/build/lib/cmake/mlir;/home/agirjoaba/dynamatic4ml_fork/polygeist/llvm-project/llvm/cmake/modules"
+    buildResult:
+      variable: "C_SUPPORTS_IMPLICIT_FALLTHROUGH_FLAG"
+      cached: true
+      stdout: |
+        Change Dir: /home/agirjoaba/dynamatic4ml_fork/visual-dataflow/build/CMakeFiles/CMakeScratch/TryCompile-WUZpIF
+        
+        Run Build Command(s):/usr/bin/ninja-build -v cmTC_cd43a && [1/2] /usr/lib64/ccache/clang -DC_SUPPORTS_IMPLICIT_FALLTHROUGH_FLAG  -fPIC -fno-semantic-interposition -Werror=date-time -Werror=unguarded-availability-new -Wall -Wextra -Wno-unused-parameter -Wwrite-strings -Wcast-qual -Wmissing-field-initializers    -Werror -Wimplicit-fallthrough -MD -MT CMakeFiles/cmTC_cd43a.dir/src.c.o -MF CMakeFiles/cmTC_cd43a.dir/src.c.o.d -o CMakeFiles/cmTC_cd43a.dir/src.c.o -c /home/agirjoaba/dynamatic4ml_fork/visual-dataflow/build/CMakeFiles/CMakeScratch/TryCompile-WUZpIF/src.c
+        [2/2] : && /usr/lib64/ccache/clang -fPIC -fno-semantic-interposition -Werror=date-time -Werror=unguarded-availability-new -Wall -Wextra -Wno-unused-parameter -Wwrite-strings -Wcast-qual -Wmissing-field-initializers  CMakeFiles/cmTC_cd43a.dir/src.c.o -o cmTC_cd43a   && :
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/usr/share/cmake/Modules/Internal/CheckSourceCompiles.cmake:101 (try_compile)"
+      - "/usr/share/cmake/Modules/Internal/CheckCompilerFlag.cmake:18 (cmake_check_source_compiles)"
+      - "/usr/share/cmake/Modules/CheckCXXCompilerFlag.cmake:40 (cmake_check_compiler_flag)"
+      - "/home/agirjoaba/dynamatic4ml_fork/polygeist/llvm-project/build/lib/cmake/llvm/HandleLLVMOptions.cmake:272 (check_cxx_compiler_flag)"
+      - "/home/agirjoaba/dynamatic4ml_fork/polygeist/llvm-project/build/lib/cmake/llvm/HandleLLVMOptions.cmake:767 (add_flag_if_supported)"
+      - "CMakeLists.txt:45 (include)"
+    checks:
+      - "Performing Test CXX_SUPPORTS_IMPLICIT_FALLTHROUGH_FLAG"
+    directories:
+      source: "/home/agirjoaba/dynamatic4ml_fork/visual-dataflow/build/CMakeFiles/CMakeScratch/TryCompile-5AkZfj"
+      binary: "/home/agirjoaba/dynamatic4ml_fork/visual-dataflow/build/CMakeFiles/CMakeScratch/TryCompile-5AkZfj"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: " -fno-exceptions -fno-rtti -fPIC -fno-semantic-interposition -fvisibility-inlines-hidden -Werror=date-time -Werror=unguarded-availability-new -Wall -Wextra -Wno-unused-parameter -Wwrite-strings -Wcast-qual -Wmissing-field-initializers"
+      CMAKE_CXX_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "/home/agirjoaba/dynamatic4ml_fork/polygeist/llvm-project/build/lib/cmake/llvm;/home/agirjoaba/dynamatic4ml_fork/polygeist/llvm-project/build/lib/cmake/mlir;/home/agirjoaba/dynamatic4ml_fork/polygeist/llvm-project/llvm/cmake/modules"
+    buildResult:
+      variable: "CXX_SUPPORTS_IMPLICIT_FALLTHROUGH_FLAG"
+      cached: true
+      stdout: |
+        Change Dir: /home/agirjoaba/dynamatic4ml_fork/visual-dataflow/build/CMakeFiles/CMakeScratch/TryCompile-5AkZfj
+        
+        Run Build Command(s):/usr/bin/ninja-build -v cmTC_0e0d1 && [1/2] /usr/lib64/ccache/clang++ -DCXX_SUPPORTS_IMPLICIT_FALLTHROUGH_FLAG  -fno-exceptions -fno-rtti -fPIC -fno-semantic-interposition -fvisibility-inlines-hidden -Werror=date-time -Werror=unguarded-availability-new -Wall -Wextra -Wno-unused-parameter -Wwrite-strings -Wcast-qual -Wmissing-field-initializers  -std=gnu++17   -Werror -Wimplicit-fallthrough -MD -MT CMakeFiles/cmTC_0e0d1.dir/src.cxx.o -MF CMakeFiles/cmTC_0e0d1.dir/src.cxx.o.d -o CMakeFiles/cmTC_0e0d1.dir/src.cxx.o -c /home/agirjoaba/dynamatic4ml_fork/visual-dataflow/build/CMakeFiles/CMakeScratch/TryCompile-5AkZfj/src.cxx
+        [2/2] : && /usr/lib64/ccache/clang++ -fno-exceptions -fno-rtti -fPIC -fno-semantic-interposition -fvisibility-inlines-hidden -Werror=date-time -Werror=unguarded-availability-new -Wall -Wextra -Wno-unused-parameter -Wwrite-strings -Wcast-qual -Wmissing-field-initializers  CMakeFiles/cmTC_0e0d1.dir/src.cxx.o -o cmTC_0e0d1   && :
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/usr/share/cmake/Modules/Internal/CheckSourceCompiles.cmake:101 (try_compile)"
+      - "/usr/share/cmake/Modules/Internal/CheckCompilerFlag.cmake:18 (cmake_check_source_compiles)"
+      - "/usr/share/cmake/Modules/CheckCCompilerFlag.cmake:40 (cmake_check_compiler_flag)"
+      - "/home/agirjoaba/dynamatic4ml_fork/polygeist/llvm-project/build/lib/cmake/llvm/HandleLLVMOptions.cmake:270 (check_c_compiler_flag)"
+      - "/home/agirjoaba/dynamatic4ml_fork/polygeist/llvm-project/build/lib/cmake/llvm/HandleLLVMOptions.cmake:768 (add_flag_if_supported)"
+      - "CMakeLists.txt:45 (include)"
+    checks:
+      - "Performing Test C_SUPPORTS_COVERED_SWITCH_DEFAULT_FLAG"
+    directories:
+      source: "/home/agirjoaba/dynamatic4ml_fork/visual-dataflow/build/CMakeFiles/CMakeScratch/TryCompile-jiNdzj"
+      binary: "/home/agirjoaba/dynamatic4ml_fork/visual-dataflow/build/CMakeFiles/CMakeScratch/TryCompile-jiNdzj"
+    cmakeVariables:
+      CMAKE_C_FLAGS: " -fPIC -fno-semantic-interposition -Werror=date-time -Werror=unguarded-availability-new -Wall -Wextra -Wno-unused-parameter -Wwrite-strings -Wcast-qual -Wmissing-field-initializers -Wimplicit-fallthrough"
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "/home/agirjoaba/dynamatic4ml_fork/polygeist/llvm-project/build/lib/cmake/llvm;/home/agirjoaba/dynamatic4ml_fork/polygeist/llvm-project/build/lib/cmake/mlir;/home/agirjoaba/dynamatic4ml_fork/polygeist/llvm-project/llvm/cmake/modules"
+    buildResult:
+      variable: "C_SUPPORTS_COVERED_SWITCH_DEFAULT_FLAG"
+      cached: true
+      stdout: |
+        Change Dir: /home/agirjoaba/dynamatic4ml_fork/visual-dataflow/build/CMakeFiles/CMakeScratch/TryCompile-jiNdzj
+        
+        Run Build Command(s):/usr/bin/ninja-build -v cmTC_81c4d && [1/2] /usr/lib64/ccache/clang -DC_SUPPORTS_COVERED_SWITCH_DEFAULT_FLAG  -fPIC -fno-semantic-interposition -Werror=date-time -Werror=unguarded-availability-new -Wall -Wextra -Wno-unused-parameter -Wwrite-strings -Wcast-qual -Wmissing-field-initializers -Wimplicit-fallthrough    -Werror -Wcovered-switch-default -MD -MT CMakeFiles/cmTC_81c4d.dir/src.c.o -MF CMakeFiles/cmTC_81c4d.dir/src.c.o.d -o CMakeFiles/cmTC_81c4d.dir/src.c.o -c /home/agirjoaba/dynamatic4ml_fork/visual-dataflow/build/CMakeFiles/CMakeScratch/TryCompile-jiNdzj/src.c
+        [2/2] : && /usr/lib64/ccache/clang -fPIC -fno-semantic-interposition -Werror=date-time -Werror=unguarded-availability-new -Wall -Wextra -Wno-unused-parameter -Wwrite-strings -Wcast-qual -Wmissing-field-initializers -Wimplicit-fallthrough  CMakeFiles/cmTC_81c4d.dir/src.c.o -o cmTC_81c4d   && :
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/usr/share/cmake/Modules/Internal/CheckSourceCompiles.cmake:101 (try_compile)"
+      - "/usr/share/cmake/Modules/Internal/CheckCompilerFlag.cmake:18 (cmake_check_source_compiles)"
+      - "/usr/share/cmake/Modules/CheckCXXCompilerFlag.cmake:40 (cmake_check_compiler_flag)"
+      - "/home/agirjoaba/dynamatic4ml_fork/polygeist/llvm-project/build/lib/cmake/llvm/HandleLLVMOptions.cmake:272 (check_cxx_compiler_flag)"
+      - "/home/agirjoaba/dynamatic4ml_fork/polygeist/llvm-project/build/lib/cmake/llvm/HandleLLVMOptions.cmake:768 (add_flag_if_supported)"
+      - "CMakeLists.txt:45 (include)"
+    checks:
+      - "Performing Test CXX_SUPPORTS_COVERED_SWITCH_DEFAULT_FLAG"
+    directories:
+      source: "/home/agirjoaba/dynamatic4ml_fork/visual-dataflow/build/CMakeFiles/CMakeScratch/TryCompile-sL6k7y"
+      binary: "/home/agirjoaba/dynamatic4ml_fork/visual-dataflow/build/CMakeFiles/CMakeScratch/TryCompile-sL6k7y"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: " -fno-exceptions -fno-rtti -fPIC -fno-semantic-interposition -fvisibility-inlines-hidden -Werror=date-time -Werror=unguarded-availability-new -Wall -Wextra -Wno-unused-parameter -Wwrite-strings -Wcast-qual -Wmissing-field-initializers -Wimplicit-fallthrough"
+      CMAKE_CXX_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "/home/agirjoaba/dynamatic4ml_fork/polygeist/llvm-project/build/lib/cmake/llvm;/home/agirjoaba/dynamatic4ml_fork/polygeist/llvm-project/build/lib/cmake/mlir;/home/agirjoaba/dynamatic4ml_fork/polygeist/llvm-project/llvm/cmake/modules"
+    buildResult:
+      variable: "CXX_SUPPORTS_COVERED_SWITCH_DEFAULT_FLAG"
+      cached: true
+      stdout: |
+        Change Dir: /home/agirjoaba/dynamatic4ml_fork/visual-dataflow/build/CMakeFiles/CMakeScratch/TryCompile-sL6k7y
+        
+        Run Build Command(s):/usr/bin/ninja-build -v cmTC_446df && [1/2] /usr/lib64/ccache/clang++ -DCXX_SUPPORTS_COVERED_SWITCH_DEFAULT_FLAG  -fno-exceptions -fno-rtti -fPIC -fno-semantic-interposition -fvisibility-inlines-hidden -Werror=date-time -Werror=unguarded-availability-new -Wall -Wextra -Wno-unused-parameter -Wwrite-strings -Wcast-qual -Wmissing-field-initializers -Wimplicit-fallthrough  -std=gnu++17   -Werror -Wcovered-switch-default -MD -MT CMakeFiles/cmTC_446df.dir/src.cxx.o -MF CMakeFiles/cmTC_446df.dir/src.cxx.o.d -o CMakeFiles/cmTC_446df.dir/src.cxx.o -c /home/agirjoaba/dynamatic4ml_fork/visual-dataflow/build/CMakeFiles/CMakeScratch/TryCompile-sL6k7y/src.cxx
+        [2/2] : && /usr/lib64/ccache/clang++ -fno-exceptions -fno-rtti -fPIC -fno-semantic-interposition -fvisibility-inlines-hidden -Werror=date-time -Werror=unguarded-availability-new -Wall -Wextra -Wno-unused-parameter -Wwrite-strings -Wcast-qual -Wmissing-field-initializers -Wimplicit-fallthrough  CMakeFiles/cmTC_446df.dir/src.cxx.o -o cmTC_446df   && :
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/usr/share/cmake/Modules/Internal/CheckSourceCompiles.cmake:101 (try_compile)"
+      - "/usr/share/cmake/Modules/Internal/CheckCompilerFlag.cmake:18 (cmake_check_source_compiles)"
+      - "/usr/share/cmake/Modules/CheckCXXCompilerFlag.cmake:40 (cmake_check_compiler_flag)"
+      - "/home/agirjoaba/dynamatic4ml_fork/polygeist/llvm-project/build/lib/cmake/llvm/HandleLLVMOptions.cmake:779 (check_cxx_compiler_flag)"
+      - "CMakeLists.txt:45 (include)"
+    checks:
+      - "Performing Test CXX_SUPPORTS_CLASS_MEMACCESS_FLAG"
+    directories:
+      source: "/home/agirjoaba/dynamatic4ml_fork/visual-dataflow/build/CMakeFiles/CMakeScratch/TryCompile-dOz1py"
+      binary: "/home/agirjoaba/dynamatic4ml_fork/visual-dataflow/build/CMakeFiles/CMakeScratch/TryCompile-dOz1py"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: " -fno-exceptions -fno-rtti -fPIC -fno-semantic-interposition -fvisibility-inlines-hidden -Werror=date-time -Werror=unguarded-availability-new -Wall -Wextra -Wno-unused-parameter -Wwrite-strings -Wcast-qual -Wmissing-field-initializers -Wimplicit-fallthrough -Wcovered-switch-default"
+      CMAKE_CXX_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "/home/agirjoaba/dynamatic4ml_fork/polygeist/llvm-project/build/lib/cmake/llvm;/home/agirjoaba/dynamatic4ml_fork/polygeist/llvm-project/build/lib/cmake/mlir;/home/agirjoaba/dynamatic4ml_fork/polygeist/llvm-project/llvm/cmake/modules"
+    buildResult:
+      variable: "CXX_SUPPORTS_CLASS_MEMACCESS_FLAG"
+      cached: true
+      stdout: |
+        Change Dir: /home/agirjoaba/dynamatic4ml_fork/visual-dataflow/build/CMakeFiles/CMakeScratch/TryCompile-dOz1py
+        
+        Run Build Command(s):/usr/bin/ninja-build -v cmTC_16ed5 && [1/2] /usr/lib64/ccache/clang++ -DCXX_SUPPORTS_CLASS_MEMACCESS_FLAG  -fno-exceptions -fno-rtti -fPIC -fno-semantic-interposition -fvisibility-inlines-hidden -Werror=date-time -Werror=unguarded-availability-new -Wall -Wextra -Wno-unused-parameter -Wwrite-strings -Wcast-qual -Wmissing-field-initializers -Wimplicit-fallthrough -Wcovered-switch-default  -std=gnu++17   -Wclass-memaccess -MD -MT CMakeFiles/cmTC_16ed5.dir/src.cxx.o -MF CMakeFiles/cmTC_16ed5.dir/src.cxx.o.d -o CMakeFiles/cmTC_16ed5.dir/src.cxx.o -c /home/agirjoaba/dynamatic4ml_fork/visual-dataflow/build/CMakeFiles/CMakeScratch/TryCompile-dOz1py/src.cxx
+        warning: unknown warning option '-Wclass-memaccess'; did you mean '-Wclass-varargs'? [-Wunknown-warning-option]
+        1 warning generated.
+        [2/2] : && /usr/lib64/ccache/clang++ -fno-exceptions -fno-rtti -fPIC -fno-semantic-interposition -fvisibility-inlines-hidden -Werror=date-time -Werror=unguarded-availability-new -Wall -Wextra -Wno-unused-parameter -Wwrite-strings -Wcast-qual -Wmissing-field-initializers -Wimplicit-fallthrough -Wcovered-switch-default  CMakeFiles/cmTC_16ed5.dir/src.cxx.o -o cmTC_16ed5   && :
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/usr/share/cmake/Modules/Internal/CheckSourceCompiles.cmake:101 (try_compile)"
+      - "/usr/share/cmake/Modules/Internal/CheckCompilerFlag.cmake:18 (cmake_check_source_compiles)"
+      - "/usr/share/cmake/Modules/CheckCXXCompilerFlag.cmake:40 (cmake_check_compiler_flag)"
+      - "/home/agirjoaba/dynamatic4ml_fork/polygeist/llvm-project/build/lib/cmake/llvm/HandleLLVMOptions.cmake:796 (check_cxx_compiler_flag)"
+      - "CMakeLists.txt:45 (include)"
+    checks:
+      - "Performing Test CXX_SUPPORTS_NOEXCEPT_TYPE_FLAG"
+    directories:
+      source: "/home/agirjoaba/dynamatic4ml_fork/visual-dataflow/build/CMakeFiles/CMakeScratch/TryCompile-wEojpU"
+      binary: "/home/agirjoaba/dynamatic4ml_fork/visual-dataflow/build/CMakeFiles/CMakeScratch/TryCompile-wEojpU"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: " -fno-exceptions -fno-rtti -fPIC -fno-semantic-interposition -fvisibility-inlines-hidden -Werror=date-time -Werror=unguarded-availability-new -Wall -Wextra -Wno-unused-parameter -Wwrite-strings -Wcast-qual -Wmissing-field-initializers -Wimplicit-fallthrough -Wcovered-switch-default"
+      CMAKE_CXX_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "/home/agirjoaba/dynamatic4ml_fork/polygeist/llvm-project/build/lib/cmake/llvm;/home/agirjoaba/dynamatic4ml_fork/polygeist/llvm-project/build/lib/cmake/mlir;/home/agirjoaba/dynamatic4ml_fork/polygeist/llvm-project/llvm/cmake/modules"
+    buildResult:
+      variable: "CXX_SUPPORTS_NOEXCEPT_TYPE_FLAG"
+      cached: true
+      stdout: |
+        Change Dir: /home/agirjoaba/dynamatic4ml_fork/visual-dataflow/build/CMakeFiles/CMakeScratch/TryCompile-wEojpU
+        
+        Run Build Command(s):/usr/bin/ninja-build -v cmTC_8bcdc && [1/2] /usr/lib64/ccache/clang++ -DCXX_SUPPORTS_NOEXCEPT_TYPE_FLAG  -fno-exceptions -fno-rtti -fPIC -fno-semantic-interposition -fvisibility-inlines-hidden -Werror=date-time -Werror=unguarded-availability-new -Wall -Wextra -Wno-unused-parameter -Wwrite-strings -Wcast-qual -Wmissing-field-initializers -Wimplicit-fallthrough -Wcovered-switch-default  -std=gnu++17   -Wnoexcept-type -MD -MT CMakeFiles/cmTC_8bcdc.dir/src.cxx.o -MF CMakeFiles/cmTC_8bcdc.dir/src.cxx.o.d -o CMakeFiles/cmTC_8bcdc.dir/src.cxx.o -c /home/agirjoaba/dynamatic4ml_fork/visual-dataflow/build/CMakeFiles/CMakeScratch/TryCompile-wEojpU/src.cxx
+        [2/2] : && /usr/lib64/ccache/clang++ -fno-exceptions -fno-rtti -fPIC -fno-semantic-interposition -fvisibility-inlines-hidden -Werror=date-time -Werror=unguarded-availability-new -Wall -Wextra -Wno-unused-parameter -Wwrite-strings -Wcast-qual -Wmissing-field-initializers -Wimplicit-fallthrough -Wcovered-switch-default  CMakeFiles/cmTC_8bcdc.dir/src.cxx.o -o cmTC_8bcdc   && :
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/usr/share/cmake/Modules/Internal/CheckSourceCompiles.cmake:101 (try_compile)"
+      - "/usr/share/cmake/Modules/CheckCXXSourceCompiles.cmake:76 (cmake_check_source_compiles)"
+      - "/home/agirjoaba/dynamatic4ml_fork/polygeist/llvm-project/build/lib/cmake/llvm/HandleLLVMOptions.cmake:804 (CHECK_CXX_SOURCE_COMPILES)"
+      - "CMakeLists.txt:45 (include)"
+    checks:
+      - "Performing Test CXX_WONT_WARN_ON_FINAL_NONVIRTUALDTOR"
+    directories:
+      source: "/home/agirjoaba/dynamatic4ml_fork/visual-dataflow/build/CMakeFiles/CMakeScratch/TryCompile-7eXbxQ"
+      binary: "/home/agirjoaba/dynamatic4ml_fork/visual-dataflow/build/CMakeFiles/CMakeScratch/TryCompile-7eXbxQ"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: " -fno-exceptions -fno-rtti -fPIC -fno-semantic-interposition -fvisibility-inlines-hidden -Werror=date-time -Werror=unguarded-availability-new -Wall -Wextra -Wno-unused-parameter -Wwrite-strings -Wcast-qual -Wmissing-field-initializers -Wimplicit-fallthrough -Wcovered-switch-default -Wno-noexcept-type"
+      CMAKE_CXX_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "/home/agirjoaba/dynamatic4ml_fork/polygeist/llvm-project/build/lib/cmake/llvm;/home/agirjoaba/dynamatic4ml_fork/polygeist/llvm-project/build/lib/cmake/mlir;/home/agirjoaba/dynamatic4ml_fork/polygeist/llvm-project/llvm/cmake/modules"
+    buildResult:
+      variable: "CXX_WONT_WARN_ON_FINAL_NONVIRTUALDTOR"
+      cached: true
+      stdout: |
+        Change Dir: /home/agirjoaba/dynamatic4ml_fork/visual-dataflow/build/CMakeFiles/CMakeScratch/TryCompile-7eXbxQ
+        
+        Run Build Command(s):/usr/bin/ninja-build -v cmTC_47d4b && [1/2] /usr/lib64/ccache/clang++ -DCXX_WONT_WARN_ON_FINAL_NONVIRTUALDTOR  -fno-exceptions -fno-rtti -fPIC -fno-semantic-interposition -fvisibility-inlines-hidden -Werror=date-time -Werror=unguarded-availability-new -Wall -Wextra -Wno-unused-parameter -Wwrite-strings -Wcast-qual -Wmissing-field-initializers -Wimplicit-fallthrough -Wcovered-switch-default -Wno-noexcept-type  -Werror=non-virtual-dtor -std=gnu++17 -MD -MT CMakeFiles/cmTC_47d4b.dir/src.cxx.o -MF CMakeFiles/cmTC_47d4b.dir/src.cxx.o.d -o CMakeFiles/cmTC_47d4b.dir/src.cxx.o -c /home/agirjoaba/dynamatic4ml_fork/visual-dataflow/build/CMakeFiles/CMakeScratch/TryCompile-7eXbxQ/src.cxx
+        [2/2] : && /usr/lib64/ccache/clang++ -fno-exceptions -fno-rtti -fPIC -fno-semantic-interposition -fvisibility-inlines-hidden -Werror=date-time -Werror=unguarded-availability-new -Wall -Wextra -Wno-unused-parameter -Wwrite-strings -Wcast-qual -Wmissing-field-initializers -Wimplicit-fallthrough -Wcovered-switch-default -Wno-noexcept-type  -Werror=non-virtual-dtor  CMakeFiles/cmTC_47d4b.dir/src.cxx.o -o cmTC_47d4b   && :
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/usr/share/cmake/Modules/Internal/CheckSourceCompiles.cmake:101 (try_compile)"
+      - "/usr/share/cmake/Modules/Internal/CheckCompilerFlag.cmake:18 (cmake_check_source_compiles)"
+      - "/usr/share/cmake/Modules/CheckCXXCompilerFlag.cmake:40 (cmake_check_compiler_flag)"
+      - "/home/agirjoaba/dynamatic4ml_fork/polygeist/llvm-project/build/lib/cmake/llvm/HandleLLVMOptions.cmake:816 (check_cxx_compiler_flag)"
+      - "CMakeLists.txt:45 (include)"
+    checks:
+      - "Performing Test CXX_SUPPORTS_SUGGEST_OVERRIDE_FLAG"
+    directories:
+      source: "/home/agirjoaba/dynamatic4ml_fork/visual-dataflow/build/CMakeFiles/CMakeScratch/TryCompile-pODBEW"
+      binary: "/home/agirjoaba/dynamatic4ml_fork/visual-dataflow/build/CMakeFiles/CMakeScratch/TryCompile-pODBEW"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: " -fno-exceptions -fno-rtti -fPIC -fno-semantic-interposition -fvisibility-inlines-hidden -Werror=date-time -Werror=unguarded-availability-new -Wall -Wextra -Wno-unused-parameter -Wwrite-strings -Wcast-qual -Wmissing-field-initializers -Wimplicit-fallthrough -Wcovered-switch-default -Wno-noexcept-type -Wnon-virtual-dtor -Wdelete-non-virtual-dtor"
+      CMAKE_CXX_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "/home/agirjoaba/dynamatic4ml_fork/polygeist/llvm-project/build/lib/cmake/llvm;/home/agirjoaba/dynamatic4ml_fork/polygeist/llvm-project/build/lib/cmake/mlir;/home/agirjoaba/dynamatic4ml_fork/polygeist/llvm-project/llvm/cmake/modules"
+    buildResult:
+      variable: "CXX_SUPPORTS_SUGGEST_OVERRIDE_FLAG"
+      cached: true
+      stdout: |
+        Change Dir: /home/agirjoaba/dynamatic4ml_fork/visual-dataflow/build/CMakeFiles/CMakeScratch/TryCompile-pODBEW
+        
+        Run Build Command(s):/usr/bin/ninja-build -v cmTC_508eb && [1/2] /usr/lib64/ccache/clang++ -DCXX_SUPPORTS_SUGGEST_OVERRIDE_FLAG  -fno-exceptions -fno-rtti -fPIC -fno-semantic-interposition -fvisibility-inlines-hidden -Werror=date-time -Werror=unguarded-availability-new -Wall -Wextra -Wno-unused-parameter -Wwrite-strings -Wcast-qual -Wmissing-field-initializers -Wimplicit-fallthrough -Wcovered-switch-default -Wno-noexcept-type -Wnon-virtual-dtor -Wdelete-non-virtual-dtor  -std=gnu++17   -Wsuggest-override -MD -MT CMakeFiles/cmTC_508eb.dir/src.cxx.o -MF CMakeFiles/cmTC_508eb.dir/src.cxx.o.d -o CMakeFiles/cmTC_508eb.dir/src.cxx.o -c /home/agirjoaba/dynamatic4ml_fork/visual-dataflow/build/CMakeFiles/CMakeScratch/TryCompile-pODBEW/src.cxx
+        [2/2] : && /usr/lib64/ccache/clang++ -fno-exceptions -fno-rtti -fPIC -fno-semantic-interposition -fvisibility-inlines-hidden -Werror=date-time -Werror=unguarded-availability-new -Wall -Wextra -Wno-unused-parameter -Wwrite-strings -Wcast-qual -Wmissing-field-initializers -Wimplicit-fallthrough -Wcovered-switch-default -Wno-noexcept-type -Wnon-virtual-dtor -Wdelete-non-virtual-dtor  CMakeFiles/cmTC_508eb.dir/src.cxx.o -o cmTC_508eb   && :
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/usr/share/cmake/Modules/Internal/CheckSourceCompiles.cmake:101 (try_compile)"
+      - "/usr/share/cmake/Modules/CheckCXXSourceCompiles.cmake:76 (cmake_check_source_compiles)"
+      - "/home/agirjoaba/dynamatic4ml_fork/polygeist/llvm-project/build/lib/cmake/llvm/HandleLLVMOptions.cmake:820 (CHECK_CXX_SOURCE_COMPILES)"
+      - "CMakeLists.txt:45 (include)"
+    checks:
+      - "Performing Test CXX_WSUGGEST_OVERRIDE_ALLOWS_ONLY_FINAL"
+    directories:
+      source: "/home/agirjoaba/dynamatic4ml_fork/visual-dataflow/build/CMakeFiles/CMakeScratch/TryCompile-AHXFL1"
+      binary: "/home/agirjoaba/dynamatic4ml_fork/visual-dataflow/build/CMakeFiles/CMakeScratch/TryCompile-AHXFL1"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: " -fno-exceptions -fno-rtti -fPIC -fno-semantic-interposition -fvisibility-inlines-hidden -Werror=date-time -Werror=unguarded-availability-new -Wall -Wextra -Wno-unused-parameter -Wwrite-strings -Wcast-qual -Wmissing-field-initializers -Wimplicit-fallthrough -Wcovered-switch-default -Wno-noexcept-type -Wnon-virtual-dtor -Wdelete-non-virtual-dtor"
+      CMAKE_CXX_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "/home/agirjoaba/dynamatic4ml_fork/polygeist/llvm-project/build/lib/cmake/llvm;/home/agirjoaba/dynamatic4ml_fork/polygeist/llvm-project/build/lib/cmake/mlir;/home/agirjoaba/dynamatic4ml_fork/polygeist/llvm-project/llvm/cmake/modules"
+    buildResult:
+      variable: "CXX_WSUGGEST_OVERRIDE_ALLOWS_ONLY_FINAL"
+      cached: true
+      stdout: |
+        Change Dir: /home/agirjoaba/dynamatic4ml_fork/visual-dataflow/build/CMakeFiles/CMakeScratch/TryCompile-AHXFL1
+        
+        Run Build Command(s):/usr/bin/ninja-build -v cmTC_35a8d && [1/2] /usr/lib64/ccache/clang++ -DCXX_WSUGGEST_OVERRIDE_ALLOWS_ONLY_FINAL  -fno-exceptions -fno-rtti -fPIC -fno-semantic-interposition -fvisibility-inlines-hidden -Werror=date-time -Werror=unguarded-availability-new -Wall -Wextra -Wno-unused-parameter -Wwrite-strings -Wcast-qual -Wmissing-field-initializers -Wimplicit-fallthrough -Wcovered-switch-default -Wno-noexcept-type -Wnon-virtual-dtor -Wdelete-non-virtual-dtor  -Werror=suggest-override -std=gnu++17 -MD -MT CMakeFiles/cmTC_35a8d.dir/src.cxx.o -MF CMakeFiles/cmTC_35a8d.dir/src.cxx.o.d -o CMakeFiles/cmTC_35a8d.dir/src.cxx.o -c /home/agirjoaba/dynamatic4ml_fork/visual-dataflow/build/CMakeFiles/CMakeScratch/TryCompile-AHXFL1/src.cxx
+        /home/agirjoaba/dynamatic4ml_fork/visual-dataflow/build/CMakeFiles/CMakeScratch/TryCompile-AHXFL1/src.cxx:1:7: warning: 'base' has virtual functions but non-virtual destructor [-Wnon-virtual-dtor]
+            1 | class base {public: virtual void anchor();};
+              |       ^
+        /home/agirjoaba/dynamatic4ml_fork/visual-dataflow/build/CMakeFiles/CMakeScratch/TryCompile-AHXFL1/src.cxx:2:38: warning: 'derived' has virtual functions but non-virtual destructor [-Wnon-virtual-dtor]
+            2 |                                class derived : base {public: void anchor() final;};
+              |                                      ^
+        2 warnings generated.
+        [2/2] : && /usr/lib64/ccache/clang++ -fno-exceptions -fno-rtti -fPIC -fno-semantic-interposition -fvisibility-inlines-hidden -Werror=date-time -Werror=unguarded-availability-new -Wall -Wextra -Wno-unused-parameter -Wwrite-strings -Wcast-qual -Wmissing-field-initializers -Wimplicit-fallthrough -Wcovered-switch-default -Wno-noexcept-type -Wnon-virtual-dtor -Wdelete-non-virtual-dtor  -Werror=suggest-override  CMakeFiles/cmTC_35a8d.dir/src.cxx.o -o cmTC_35a8d   && :
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/usr/share/cmake/Modules/Internal/CheckSourceCompiles.cmake:101 (try_compile)"
+      - "/usr/share/cmake/Modules/CheckCSourceCompiles.cmake:76 (cmake_check_source_compiles)"
+      - "/home/agirjoaba/dynamatic4ml_fork/polygeist/llvm-project/build/lib/cmake/llvm/HandleLLVMOptions.cmake:832 (CHECK_C_SOURCE_COMPILES)"
+      - "CMakeLists.txt:45 (include)"
+    checks:
+      - "Performing Test C_WCOMMENT_ALLOWS_LINE_WRAP"
+    directories:
+      source: "/home/agirjoaba/dynamatic4ml_fork/visual-dataflow/build/CMakeFiles/CMakeScratch/TryCompile-7z8FpY"
+      binary: "/home/agirjoaba/dynamatic4ml_fork/visual-dataflow/build/CMakeFiles/CMakeScratch/TryCompile-7z8FpY"
+    cmakeVariables:
+      CMAKE_C_FLAGS: " -fPIC -fno-semantic-interposition -Werror=date-time -Werror=unguarded-availability-new -Wall -Wextra -Wno-unused-parameter -Wwrite-strings -Wcast-qual -Wmissing-field-initializers -Wimplicit-fallthrough -Wcovered-switch-default"
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "/home/agirjoaba/dynamatic4ml_fork/polygeist/llvm-project/build/lib/cmake/llvm;/home/agirjoaba/dynamatic4ml_fork/polygeist/llvm-project/build/lib/cmake/mlir;/home/agirjoaba/dynamatic4ml_fork/polygeist/llvm-project/llvm/cmake/modules"
+    buildResult:
+      variable: "C_WCOMMENT_ALLOWS_LINE_WRAP"
+      cached: true
+      stdout: |
+        Change Dir: /home/agirjoaba/dynamatic4ml_fork/visual-dataflow/build/CMakeFiles/CMakeScratch/TryCompile-7z8FpY
+        
+        Run Build Command(s):/usr/bin/ninja-build -v cmTC_6106a && [1/2] /usr/lib64/ccache/clang -DC_WCOMMENT_ALLOWS_LINE_WRAP  -fPIC -fno-semantic-interposition -Werror=date-time -Werror=unguarded-availability-new -Wall -Wextra -Wno-unused-parameter -Wwrite-strings -Wcast-qual -Wmissing-field-initializers -Wimplicit-fallthrough -Wcovered-switch-default  -Werror -Wcomment -MD -MT CMakeFiles/cmTC_6106a.dir/src.c.o -MF CMakeFiles/cmTC_6106a.dir/src.c.o.d -o CMakeFiles/cmTC_6106a.dir/src.c.o -c /home/agirjoaba/dynamatic4ml_fork/visual-dataflow/build/CMakeFiles/CMakeScratch/TryCompile-7z8FpY/src.c
+        [2/2] : && /usr/lib64/ccache/clang -fPIC -fno-semantic-interposition -Werror=date-time -Werror=unguarded-availability-new -Wall -Wextra -Wno-unused-parameter -Wwrite-strings -Wcast-qual -Wmissing-field-initializers -Wimplicit-fallthrough -Wcovered-switch-default  -Werror -Wcomment  CMakeFiles/cmTC_6106a.dir/src.c.o -o cmTC_6106a   && :
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/usr/share/cmake/Modules/Internal/CheckSourceCompiles.cmake:101 (try_compile)"
+      - "/usr/share/cmake/Modules/Internal/CheckCompilerFlag.cmake:18 (cmake_check_source_compiles)"
+      - "/usr/share/cmake/Modules/CheckCCompilerFlag.cmake:40 (cmake_check_compiler_flag)"
+      - "/home/agirjoaba/dynamatic4ml_fork/polygeist/llvm-project/build/lib/cmake/llvm/HandleLLVMOptions.cmake:270 (check_c_compiler_flag)"
+      - "/home/agirjoaba/dynamatic4ml_fork/polygeist/llvm-project/build/lib/cmake/llvm/HandleLLVMOptions.cmake:840 (add_flag_if_supported)"
+      - "CMakeLists.txt:45 (include)"
+    checks:
+      - "Performing Test C_SUPPORTS_STRING_CONVERSION_FLAG"
+    directories:
+      source: "/home/agirjoaba/dynamatic4ml_fork/visual-dataflow/build/CMakeFiles/CMakeScratch/TryCompile-QxUX1D"
+      binary: "/home/agirjoaba/dynamatic4ml_fork/visual-dataflow/build/CMakeFiles/CMakeScratch/TryCompile-QxUX1D"
+    cmakeVariables:
+      CMAKE_C_FLAGS: " -fPIC -fno-semantic-interposition -Werror=date-time -Werror=unguarded-availability-new -Wall -Wextra -Wno-unused-parameter -Wwrite-strings -Wcast-qual -Wmissing-field-initializers -Wimplicit-fallthrough -Wcovered-switch-default"
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "/home/agirjoaba/dynamatic4ml_fork/polygeist/llvm-project/build/lib/cmake/llvm;/home/agirjoaba/dynamatic4ml_fork/polygeist/llvm-project/build/lib/cmake/mlir;/home/agirjoaba/dynamatic4ml_fork/polygeist/llvm-project/llvm/cmake/modules"
+    buildResult:
+      variable: "C_SUPPORTS_STRING_CONVERSION_FLAG"
+      cached: true
+      stdout: |
+        Change Dir: /home/agirjoaba/dynamatic4ml_fork/visual-dataflow/build/CMakeFiles/CMakeScratch/TryCompile-QxUX1D
+        
+        Run Build Command(s):/usr/bin/ninja-build -v cmTC_fd0fe && [1/2] /usr/lib64/ccache/clang -DC_SUPPORTS_STRING_CONVERSION_FLAG  -fPIC -fno-semantic-interposition -Werror=date-time -Werror=unguarded-availability-new -Wall -Wextra -Wno-unused-parameter -Wwrite-strings -Wcast-qual -Wmissing-field-initializers -Wimplicit-fallthrough -Wcovered-switch-default    -Werror -Wstring-conversion -MD -MT CMakeFiles/cmTC_fd0fe.dir/src.c.o -MF CMakeFiles/cmTC_fd0fe.dir/src.c.o.d -o CMakeFiles/cmTC_fd0fe.dir/src.c.o -c /home/agirjoaba/dynamatic4ml_fork/visual-dataflow/build/CMakeFiles/CMakeScratch/TryCompile-QxUX1D/src.c
+        [2/2] : && /usr/lib64/ccache/clang -fPIC -fno-semantic-interposition -Werror=date-time -Werror=unguarded-availability-new -Wall -Wextra -Wno-unused-parameter -Wwrite-strings -Wcast-qual -Wmissing-field-initializers -Wimplicit-fallthrough -Wcovered-switch-default  CMakeFiles/cmTC_fd0fe.dir/src.c.o -o cmTC_fd0fe   && :
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/usr/share/cmake/Modules/Internal/CheckSourceCompiles.cmake:101 (try_compile)"
+      - "/usr/share/cmake/Modules/Internal/CheckCompilerFlag.cmake:18 (cmake_check_source_compiles)"
+      - "/usr/share/cmake/Modules/CheckCXXCompilerFlag.cmake:40 (cmake_check_compiler_flag)"
+      - "/home/agirjoaba/dynamatic4ml_fork/polygeist/llvm-project/build/lib/cmake/llvm/HandleLLVMOptions.cmake:272 (check_cxx_compiler_flag)"
+      - "/home/agirjoaba/dynamatic4ml_fork/polygeist/llvm-project/build/lib/cmake/llvm/HandleLLVMOptions.cmake:840 (add_flag_if_supported)"
+      - "CMakeLists.txt:45 (include)"
+    checks:
+      - "Performing Test CXX_SUPPORTS_STRING_CONVERSION_FLAG"
+    directories:
+      source: "/home/agirjoaba/dynamatic4ml_fork/visual-dataflow/build/CMakeFiles/CMakeScratch/TryCompile-sRFsbq"
+      binary: "/home/agirjoaba/dynamatic4ml_fork/visual-dataflow/build/CMakeFiles/CMakeScratch/TryCompile-sRFsbq"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: " -fno-exceptions -fno-rtti -fPIC -fno-semantic-interposition -fvisibility-inlines-hidden -Werror=date-time -Werror=unguarded-availability-new -Wall -Wextra -Wno-unused-parameter -Wwrite-strings -Wcast-qual -Wmissing-field-initializers -Wimplicit-fallthrough -Wcovered-switch-default -Wno-noexcept-type -Wnon-virtual-dtor -Wdelete-non-virtual-dtor -Wsuggest-override"
+      CMAKE_CXX_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "/home/agirjoaba/dynamatic4ml_fork/polygeist/llvm-project/build/lib/cmake/llvm;/home/agirjoaba/dynamatic4ml_fork/polygeist/llvm-project/build/lib/cmake/mlir;/home/agirjoaba/dynamatic4ml_fork/polygeist/llvm-project/llvm/cmake/modules"
+    buildResult:
+      variable: "CXX_SUPPORTS_STRING_CONVERSION_FLAG"
+      cached: true
+      stdout: |
+        Change Dir: /home/agirjoaba/dynamatic4ml_fork/visual-dataflow/build/CMakeFiles/CMakeScratch/TryCompile-sRFsbq
+        
+        Run Build Command(s):/usr/bin/ninja-build -v cmTC_32ac4 && [1/2] /usr/lib64/ccache/clang++ -DCXX_SUPPORTS_STRING_CONVERSION_FLAG  -fno-exceptions -fno-rtti -fPIC -fno-semantic-interposition -fvisibility-inlines-hidden -Werror=date-time -Werror=unguarded-availability-new -Wall -Wextra -Wno-unused-parameter -Wwrite-strings -Wcast-qual -Wmissing-field-initializers -Wimplicit-fallthrough -Wcovered-switch-default -Wno-noexcept-type -Wnon-virtual-dtor -Wdelete-non-virtual-dtor -Wsuggest-override  -std=gnu++17   -Werror -Wstring-conversion -MD -MT CMakeFiles/cmTC_32ac4.dir/src.cxx.o -MF CMakeFiles/cmTC_32ac4.dir/src.cxx.o.d -o CMakeFiles/cmTC_32ac4.dir/src.cxx.o -c /home/agirjoaba/dynamatic4ml_fork/visual-dataflow/build/CMakeFiles/CMakeScratch/TryCompile-sRFsbq/src.cxx
+        [2/2] : && /usr/lib64/ccache/clang++ -fno-exceptions -fno-rtti -fPIC -fno-semantic-interposition -fvisibility-inlines-hidden -Werror=date-time -Werror=unguarded-availability-new -Wall -Wextra -Wno-unused-parameter -Wwrite-strings -Wcast-qual -Wmissing-field-initializers -Wimplicit-fallthrough -Wcovered-switch-default -Wno-noexcept-type -Wnon-virtual-dtor -Wdelete-non-virtual-dtor -Wsuggest-override  CMakeFiles/cmTC_32ac4.dir/src.cxx.o -o cmTC_32ac4   && :
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/usr/share/cmake/Modules/Internal/CheckSourceCompiles.cmake:101 (try_compile)"
+      - "/usr/share/cmake/Modules/Internal/CheckCompilerFlag.cmake:18 (cmake_check_source_compiles)"
+      - "/usr/share/cmake/Modules/CheckCCompilerFlag.cmake:40 (cmake_check_compiler_flag)"
+      - "/home/agirjoaba/dynamatic4ml_fork/polygeist/llvm-project/build/lib/cmake/llvm/HandleLLVMOptions.cmake:270 (check_c_compiler_flag)"
+      - "/home/agirjoaba/dynamatic4ml_fork/polygeist/llvm-project/build/lib/cmake/llvm/HandleLLVMOptions.cmake:850 (add_flag_if_supported)"
+      - "CMakeLists.txt:45 (include)"
+    checks:
+      - "Performing Test C_SUPPORTS_MISLEADING_INDENTATION_FLAG"
+    directories:
+      source: "/home/agirjoaba/dynamatic4ml_fork/visual-dataflow/build/CMakeFiles/CMakeScratch/TryCompile-nwR9x0"
+      binary: "/home/agirjoaba/dynamatic4ml_fork/visual-dataflow/build/CMakeFiles/CMakeScratch/TryCompile-nwR9x0"
+    cmakeVariables:
+      CMAKE_C_FLAGS: " -fPIC -fno-semantic-interposition -Werror=date-time -Werror=unguarded-availability-new -Wall -Wextra -Wno-unused-parameter -Wwrite-strings -Wcast-qual -Wmissing-field-initializers -Wimplicit-fallthrough -Wcovered-switch-default -Wstring-conversion"
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "/home/agirjoaba/dynamatic4ml_fork/polygeist/llvm-project/build/lib/cmake/llvm;/home/agirjoaba/dynamatic4ml_fork/polygeist/llvm-project/build/lib/cmake/mlir;/home/agirjoaba/dynamatic4ml_fork/polygeist/llvm-project/llvm/cmake/modules"
+    buildResult:
+      variable: "C_SUPPORTS_MISLEADING_INDENTATION_FLAG"
+      cached: true
+      stdout: |
+        Change Dir: /home/agirjoaba/dynamatic4ml_fork/visual-dataflow/build/CMakeFiles/CMakeScratch/TryCompile-nwR9x0
+        
+        Run Build Command(s):/usr/bin/ninja-build -v cmTC_895ee && [1/2] /usr/lib64/ccache/clang -DC_SUPPORTS_MISLEADING_INDENTATION_FLAG  -fPIC -fno-semantic-interposition -Werror=date-time -Werror=unguarded-availability-new -Wall -Wextra -Wno-unused-parameter -Wwrite-strings -Wcast-qual -Wmissing-field-initializers -Wimplicit-fallthrough -Wcovered-switch-default -Wstring-conversion    -Werror -Wmisleading-indentation -MD -MT CMakeFiles/cmTC_895ee.dir/src.c.o -MF CMakeFiles/cmTC_895ee.dir/src.c.o.d -o CMakeFiles/cmTC_895ee.dir/src.c.o -c /home/agirjoaba/dynamatic4ml_fork/visual-dataflow/build/CMakeFiles/CMakeScratch/TryCompile-nwR9x0/src.c
+        [2/2] : && /usr/lib64/ccache/clang -fPIC -fno-semantic-interposition -Werror=date-time -Werror=unguarded-availability-new -Wall -Wextra -Wno-unused-parameter -Wwrite-strings -Wcast-qual -Wmissing-field-initializers -Wimplicit-fallthrough -Wcovered-switch-default -Wstring-conversion  CMakeFiles/cmTC_895ee.dir/src.c.o -o cmTC_895ee   && :
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/usr/share/cmake/Modules/Internal/CheckSourceCompiles.cmake:101 (try_compile)"
+      - "/usr/share/cmake/Modules/Internal/CheckCompilerFlag.cmake:18 (cmake_check_source_compiles)"
+      - "/usr/share/cmake/Modules/CheckCXXCompilerFlag.cmake:40 (cmake_check_compiler_flag)"
+      - "/home/agirjoaba/dynamatic4ml_fork/polygeist/llvm-project/build/lib/cmake/llvm/HandleLLVMOptions.cmake:272 (check_cxx_compiler_flag)"
+      - "/home/agirjoaba/dynamatic4ml_fork/polygeist/llvm-project/build/lib/cmake/llvm/HandleLLVMOptions.cmake:850 (add_flag_if_supported)"
+      - "CMakeLists.txt:45 (include)"
+    checks:
+      - "Performing Test CXX_SUPPORTS_MISLEADING_INDENTATION_FLAG"
+    directories:
+      source: "/home/agirjoaba/dynamatic4ml_fork/visual-dataflow/build/CMakeFiles/CMakeScratch/TryCompile-hlW7F1"
+      binary: "/home/agirjoaba/dynamatic4ml_fork/visual-dataflow/build/CMakeFiles/CMakeScratch/TryCompile-hlW7F1"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: " -fno-exceptions -fno-rtti -fPIC -fno-semantic-interposition -fvisibility-inlines-hidden -Werror=date-time -Werror=unguarded-availability-new -Wall -Wextra -Wno-unused-parameter -Wwrite-strings -Wcast-qual -Wmissing-field-initializers -Wimplicit-fallthrough -Wcovered-switch-default -Wno-noexcept-type -Wnon-virtual-dtor -Wdelete-non-virtual-dtor -Wsuggest-override -Wstring-conversion"
+      CMAKE_CXX_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "/home/agirjoaba/dynamatic4ml_fork/polygeist/llvm-project/build/lib/cmake/llvm;/home/agirjoaba/dynamatic4ml_fork/polygeist/llvm-project/build/lib/cmake/mlir;/home/agirjoaba/dynamatic4ml_fork/polygeist/llvm-project/llvm/cmake/modules"
+    buildResult:
+      variable: "CXX_SUPPORTS_MISLEADING_INDENTATION_FLAG"
+      cached: true
+      stdout: |
+        Change Dir: /home/agirjoaba/dynamatic4ml_fork/visual-dataflow/build/CMakeFiles/CMakeScratch/TryCompile-hlW7F1
+        
+        Run Build Command(s):/usr/bin/ninja-build -v cmTC_dde54 && [1/2] /usr/lib64/ccache/clang++ -DCXX_SUPPORTS_MISLEADING_INDENTATION_FLAG  -fno-exceptions -fno-rtti -fPIC -fno-semantic-interposition -fvisibility-inlines-hidden -Werror=date-time -Werror=unguarded-availability-new -Wall -Wextra -Wno-unused-parameter -Wwrite-strings -Wcast-qual -Wmissing-field-initializers -Wimplicit-fallthrough -Wcovered-switch-default -Wno-noexcept-type -Wnon-virtual-dtor -Wdelete-non-virtual-dtor -Wsuggest-override -Wstring-conversion  -std=gnu++17   -Werror -Wmisleading-indentation -MD -MT CMakeFiles/cmTC_dde54.dir/src.cxx.o -MF CMakeFiles/cmTC_dde54.dir/src.cxx.o.d -o CMakeFiles/cmTC_dde54.dir/src.cxx.o -c /home/agirjoaba/dynamatic4ml_fork/visual-dataflow/build/CMakeFiles/CMakeScratch/TryCompile-hlW7F1/src.cxx
+        [2/2] : && /usr/lib64/ccache/clang++ -fno-exceptions -fno-rtti -fPIC -fno-semantic-interposition -fvisibility-inlines-hidden -Werror=date-time -Werror=unguarded-availability-new -Wall -Wextra -Wno-unused-parameter -Wwrite-strings -Wcast-qual -Wmissing-field-initializers -Wimplicit-fallthrough -Wcovered-switch-default -Wno-noexcept-type -Wnon-virtual-dtor -Wdelete-non-virtual-dtor -Wsuggest-override -Wstring-conversion  CMakeFiles/cmTC_dde54.dir/src.cxx.o -o cmTC_dde54   && :
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/usr/share/cmake/Modules/Internal/CheckSourceCompiles.cmake:101 (try_compile)"
+      - "/usr/share/cmake/Modules/Internal/CheckCompilerFlag.cmake:18 (cmake_check_source_compiles)"
+      - "/usr/share/cmake/Modules/CheckCCompilerFlag.cmake:40 (cmake_check_compiler_flag)"
+      - "/home/agirjoaba/dynamatic4ml_fork/polygeist/llvm-project/build/lib/cmake/llvm/HandleLLVMOptions.cmake:270 (check_c_compiler_flag)"
+      - "/home/agirjoaba/dynamatic4ml_fork/polygeist/llvm-project/build/lib/cmake/llvm/HandleLLVMOptions.cmake:854 (add_flag_if_supported)"
+      - "CMakeLists.txt:45 (include)"
+    checks:
+      - "Performing Test C_SUPPORTS_CTAD_MAYBE_UNSPPORTED_FLAG"
+    directories:
+      source: "/home/agirjoaba/dynamatic4ml_fork/visual-dataflow/build/CMakeFiles/CMakeScratch/TryCompile-VIgDEi"
+      binary: "/home/agirjoaba/dynamatic4ml_fork/visual-dataflow/build/CMakeFiles/CMakeScratch/TryCompile-VIgDEi"
+    cmakeVariables:
+      CMAKE_C_FLAGS: " -fPIC -fno-semantic-interposition -Werror=date-time -Werror=unguarded-availability-new -Wall -Wextra -Wno-unused-parameter -Wwrite-strings -Wcast-qual -Wmissing-field-initializers -Wimplicit-fallthrough -Wcovered-switch-default -Wstring-conversion -Wmisleading-indentation"
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "/home/agirjoaba/dynamatic4ml_fork/polygeist/llvm-project/build/lib/cmake/llvm;/home/agirjoaba/dynamatic4ml_fork/polygeist/llvm-project/build/lib/cmake/mlir;/home/agirjoaba/dynamatic4ml_fork/polygeist/llvm-project/llvm/cmake/modules"
+    buildResult:
+      variable: "C_SUPPORTS_CTAD_MAYBE_UNSPPORTED_FLAG"
+      cached: true
+      stdout: |
+        Change Dir: /home/agirjoaba/dynamatic4ml_fork/visual-dataflow/build/CMakeFiles/CMakeScratch/TryCompile-VIgDEi
+        
+        Run Build Command(s):/usr/bin/ninja-build -v cmTC_a8ae7 && [1/2] /usr/lib64/ccache/clang -DC_SUPPORTS_CTAD_MAYBE_UNSPPORTED_FLAG  -fPIC -fno-semantic-interposition -Werror=date-time -Werror=unguarded-availability-new -Wall -Wextra -Wno-unused-parameter -Wwrite-strings -Wcast-qual -Wmissing-field-initializers -Wimplicit-fallthrough -Wcovered-switch-default -Wstring-conversion -Wmisleading-indentation    -Werror -Wctad-maybe-unsupported -MD -MT CMakeFiles/cmTC_a8ae7.dir/src.c.o -MF CMakeFiles/cmTC_a8ae7.dir/src.c.o.d -o CMakeFiles/cmTC_a8ae7.dir/src.c.o -c /home/agirjoaba/dynamatic4ml_fork/visual-dataflow/build/CMakeFiles/CMakeScratch/TryCompile-VIgDEi/src.c
+        [2/2] : && /usr/lib64/ccache/clang -fPIC -fno-semantic-interposition -Werror=date-time -Werror=unguarded-availability-new -Wall -Wextra -Wno-unused-parameter -Wwrite-strings -Wcast-qual -Wmissing-field-initializers -Wimplicit-fallthrough -Wcovered-switch-default -Wstring-conversion -Wmisleading-indentation  CMakeFiles/cmTC_a8ae7.dir/src.c.o -o cmTC_a8ae7   && :
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/usr/share/cmake/Modules/Internal/CheckSourceCompiles.cmake:101 (try_compile)"
+      - "/usr/share/cmake/Modules/Internal/CheckCompilerFlag.cmake:18 (cmake_check_source_compiles)"
+      - "/usr/share/cmake/Modules/CheckCXXCompilerFlag.cmake:40 (cmake_check_compiler_flag)"
+      - "/home/agirjoaba/dynamatic4ml_fork/polygeist/llvm-project/build/lib/cmake/llvm/HandleLLVMOptions.cmake:272 (check_cxx_compiler_flag)"
+      - "/home/agirjoaba/dynamatic4ml_fork/polygeist/llvm-project/build/lib/cmake/llvm/HandleLLVMOptions.cmake:854 (add_flag_if_supported)"
+      - "CMakeLists.txt:45 (include)"
+    checks:
+      - "Performing Test CXX_SUPPORTS_CTAD_MAYBE_UNSPPORTED_FLAG"
+    directories:
+      source: "/home/agirjoaba/dynamatic4ml_fork/visual-dataflow/build/CMakeFiles/CMakeScratch/TryCompile-XSgcTl"
+      binary: "/home/agirjoaba/dynamatic4ml_fork/visual-dataflow/build/CMakeFiles/CMakeScratch/TryCompile-XSgcTl"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: " -fno-exceptions -fno-rtti -fPIC -fno-semantic-interposition -fvisibility-inlines-hidden -Werror=date-time -Werror=unguarded-availability-new -Wall -Wextra -Wno-unused-parameter -Wwrite-strings -Wcast-qual -Wmissing-field-initializers -Wimplicit-fallthrough -Wcovered-switch-default -Wno-noexcept-type -Wnon-virtual-dtor -Wdelete-non-virtual-dtor -Wsuggest-override -Wstring-conversion -Wmisleading-indentation"
+      CMAKE_CXX_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "/home/agirjoaba/dynamatic4ml_fork/polygeist/llvm-project/build/lib/cmake/llvm;/home/agirjoaba/dynamatic4ml_fork/polygeist/llvm-project/build/lib/cmake/mlir;/home/agirjoaba/dynamatic4ml_fork/polygeist/llvm-project/llvm/cmake/modules"
+    buildResult:
+      variable: "CXX_SUPPORTS_CTAD_MAYBE_UNSPPORTED_FLAG"
+      cached: true
+      stdout: |
+        Change Dir: /home/agirjoaba/dynamatic4ml_fork/visual-dataflow/build/CMakeFiles/CMakeScratch/TryCompile-XSgcTl
+        
+        Run Build Command(s):/usr/bin/ninja-build -v cmTC_fdfa7 && [1/2] /usr/lib64/ccache/clang++ -DCXX_SUPPORTS_CTAD_MAYBE_UNSPPORTED_FLAG  -fno-exceptions -fno-rtti -fPIC -fno-semantic-interposition -fvisibility-inlines-hidden -Werror=date-time -Werror=unguarded-availability-new -Wall -Wextra -Wno-unused-parameter -Wwrite-strings -Wcast-qual -Wmissing-field-initializers -Wimplicit-fallthrough -Wcovered-switch-default -Wno-noexcept-type -Wnon-virtual-dtor -Wdelete-non-virtual-dtor -Wsuggest-override -Wstring-conversion -Wmisleading-indentation  -std=gnu++17   -Werror -Wctad-maybe-unsupported -MD -MT CMakeFiles/cmTC_fdfa7.dir/src.cxx.o -MF CMakeFiles/cmTC_fdfa7.dir/src.cxx.o.d -o CMakeFiles/cmTC_fdfa7.dir/src.cxx.o -c /home/agirjoaba/dynamatic4ml_fork/visual-dataflow/build/CMakeFiles/CMakeScratch/TryCompile-XSgcTl/src.cxx
+        [2/2] : && /usr/lib64/ccache/clang++ -fno-exceptions -fno-rtti -fPIC -fno-semantic-interposition -fvisibility-inlines-hidden -Werror=date-time -Werror=unguarded-availability-new -Wall -Wextra -Wno-unused-parameter -Wwrite-strings -Wcast-qual -Wmissing-field-initializers -Wimplicit-fallthrough -Wcovered-switch-default -Wno-noexcept-type -Wnon-virtual-dtor -Wdelete-non-virtual-dtor -Wsuggest-override -Wstring-conversion -Wmisleading-indentation  CMakeFiles/cmTC_fdfa7.dir/src.cxx.o -o cmTC_fdfa7   && :
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/usr/share/cmake/Modules/Internal/CheckSourceCompiles.cmake:101 (try_compile)"
+      - "/usr/share/cmake/Modules/Internal/CheckLinkerFlag.cmake:37 (cmake_check_source_compiles)"
+      - "/usr/share/cmake/Modules/CheckLinkerFlag.cmake:44 (cmake_check_linker_flag)"
+      - "/home/agirjoaba/dynamatic4ml_fork/polygeist/llvm-project/build/lib/cmake/llvm/LLVMCheckLinkerFlag.cmake:5 (check_linker_flag)"
+      - "/home/agirjoaba/dynamatic4ml_fork/polygeist/llvm-project/build/lib/cmake/llvm/HandleLLVMOptions.cmake:1031 (llvm_check_linker_flag)"
+      - "CMakeLists.txt:45 (include)"
+    checks:
+      - "Performing Test LINKER_SUPPORTS_COLOR_DIAGNOSTICS"
+    directories:
+      source: "/home/agirjoaba/dynamatic4ml_fork/visual-dataflow/build/CMakeFiles/CMakeScratch/TryCompile-EtQg6a"
+      binary: "/home/agirjoaba/dynamatic4ml_fork/visual-dataflow/build/CMakeFiles/CMakeScratch/TryCompile-EtQg6a"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: " -fno-exceptions -fno-rtti -fPIC -fno-semantic-interposition -fvisibility-inlines-hidden -Werror=date-time -Werror=unguarded-availability-new -Wall -Wextra -Wno-unused-parameter -Wwrite-strings -Wcast-qual -Wmissing-field-initializers -Wimplicit-fallthrough -Wcovered-switch-default -Wno-noexcept-type -Wnon-virtual-dtor -Wdelete-non-virtual-dtor -Wsuggest-override -Wstring-conversion -Wmisleading-indentation -Wctad-maybe-unsupported -fdiagnostics-color"
+      CMAKE_CXX_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "/home/agirjoaba/dynamatic4ml_fork/polygeist/llvm-project/build/lib/cmake/llvm;/home/agirjoaba/dynamatic4ml_fork/polygeist/llvm-project/build/lib/cmake/mlir;/home/agirjoaba/dynamatic4ml_fork/polygeist/llvm-project/llvm/cmake/modules"
+    buildResult:
+      variable: "LINKER_SUPPORTS_COLOR_DIAGNOSTICS"
+      cached: true
+      stdout: |
+        Change Dir: /home/agirjoaba/dynamatic4ml_fork/visual-dataflow/build/CMakeFiles/CMakeScratch/TryCompile-EtQg6a
+        
+        Run Build Command(s):/usr/bin/ninja-build -v cmTC_3f4de && [1/2] /usr/lib64/ccache/clang++ -DLINKER_SUPPORTS_COLOR_DIAGNOSTICS  -fno-exceptions -fno-rtti -fPIC -fno-semantic-interposition -fvisibility-inlines-hidden -Werror=date-time -Werror=unguarded-availability-new -Wall -Wextra -Wno-unused-parameter -Wwrite-strings -Wcast-qual -Wmissing-field-initializers -Wimplicit-fallthrough -Wcovered-switch-default -Wno-noexcept-type -Wnon-virtual-dtor -Wdelete-non-virtual-dtor -Wsuggest-override -Wstring-conversion -Wmisleading-indentation -Wctad-maybe-unsupported -fdiagnostics-color  -std=gnu++17 -MD -MT CMakeFiles/cmTC_3f4de.dir/src.cxx.o -MF CMakeFiles/cmTC_3f4de.dir/src.cxx.o.d -o CMakeFiles/cmTC_3f4de.dir/src.cxx.o -c /home/agirjoaba/dynamatic4ml_fork/visual-dataflow/build/CMakeFiles/CMakeScratch/TryCompile-EtQg6a/src.cxx
+        [2/2] : && /usr/lib64/ccache/clang++ -fno-exceptions -fno-rtti -fPIC -fno-semantic-interposition -fvisibility-inlines-hidden -Werror=date-time -Werror=unguarded-availability-new -Wall -Wextra -Wno-unused-parameter -Wwrite-strings -Wcast-qual -Wmissing-field-initializers -Wimplicit-fallthrough -Wcovered-switch-default -Wno-noexcept-type -Wnon-virtual-dtor -Wdelete-non-virtual-dtor -Wsuggest-override -Wstring-conversion -Wmisleading-indentation -Wctad-maybe-unsupported -fdiagnostics-color -Wl,--color-diagnostics CMakeFiles/cmTC_3f4de.dir/src.cxx.o -o cmTC_3f4de   && :
+        FAILED: cmTC_3f4de 
+        : && /usr/lib64/ccache/clang++ -fno-exceptions -fno-rtti -fPIC -fno-semantic-interposition -fvisibility-inlines-hidden -Werror=date-time -Werror=unguarded-availability-new -Wall -Wextra -Wno-unused-parameter -Wwrite-strings -Wcast-qual -Wmissing-field-initializers -Wimplicit-fallthrough -Wcovered-switch-default -Wno-noexcept-type -Wnon-virtual-dtor -Wdelete-non-virtual-dtor -Wsuggest-override -Wstring-conversion -Wmisleading-indentation -Wctad-maybe-unsupported -fdiagnostics-color -Wl,--color-diagnostics CMakeFiles/cmTC_3f4de.dir/src.cxx.o -o cmTC_3f4de   && :
+        /usr/bin/ld: unrecognized option '--color-diagnostics'
+        /usr/bin/ld: use the --help option for usage information
+        clang++: error: linker command failed with exit code 1 (use -v to see invocation)
+        ninja: build stopped: subcommand failed.
+        
+      exitCode: 1
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/usr/share/cmake/Modules/CheckSymbolExists.cmake:145 (try_compile)"
+      - "/usr/share/cmake/Modules/CheckSymbolExists.cmake:71 (__CHECK_SYMBOL_EXISTS_IMPL)"
+      - "/home/agirjoaba/dynamatic4ml_fork/polygeist/llvm-project/build/lib/cmake/llvm/HandleLLVMOptions.cmake:1266 (check_symbol_exists)"
+      - "CMakeLists.txt:45 (include)"
+    checks:
+      - "Looking for os_signpost_interval_begin"
+    directories:
+      source: "/home/agirjoaba/dynamatic4ml_fork/visual-dataflow/build/CMakeFiles/CMakeScratch/TryCompile-IUF8fJ"
+      binary: "/home/agirjoaba/dynamatic4ml_fork/visual-dataflow/build/CMakeFiles/CMakeScratch/TryCompile-IUF8fJ"
+    cmakeVariables:
+      CMAKE_C_FLAGS: " -fPIC -fno-semantic-interposition  -Wall -Wextra -Wno-unused-parameter -Wwrite-strings -Wcast-qual -Wmissing-field-initializers -Wimplicit-fallthrough -Wcovered-switch-default -Wstring-conversion -Wmisleading-indentation -Wctad-maybe-unsupported -fdiagnostics-color"
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "/home/agirjoaba/dynamatic4ml_fork/polygeist/llvm-project/build/lib/cmake/llvm;/home/agirjoaba/dynamatic4ml_fork/polygeist/llvm-project/build/lib/cmake/mlir;/home/agirjoaba/dynamatic4ml_fork/polygeist/llvm-project/llvm/cmake/modules"
+    buildResult:
+      variable: "macos_signposts_available"
+      cached: true
+      stdout: |
+        Change Dir: /home/agirjoaba/dynamatic4ml_fork/visual-dataflow/build/CMakeFiles/CMakeScratch/TryCompile-IUF8fJ
+        
+        Run Build Command(s):/usr/bin/ninja-build -v cmTC_d6793 && [1/2] /usr/lib64/ccache/clang   -fPIC -fno-semantic-interposition  -Wall -Wextra -Wno-unused-parameter -Wwrite-strings -Wcast-qual -Wmissing-field-initializers -Wimplicit-fallthrough -Wcovered-switch-default -Wstring-conversion -Wmisleading-indentation -Wctad-maybe-unsupported -fdiagnostics-color -MD -MT CMakeFiles/cmTC_d6793.dir/CheckSymbolExists.c.o -MF CMakeFiles/cmTC_d6793.dir/CheckSymbolExists.c.o.d -o CMakeFiles/cmTC_d6793.dir/CheckSymbolExists.c.o -c /home/agirjoaba/dynamatic4ml_fork/visual-dataflow/build/CMakeFiles/CMakeScratch/TryCompile-IUF8fJ/CheckSymbolExists.c
+        FAILED: CMakeFiles/cmTC_d6793.dir/CheckSymbolExists.c.o 
+        /usr/lib64/ccache/clang   -fPIC -fno-semantic-interposition  -Wall -Wextra -Wno-unused-parameter -Wwrite-strings -Wcast-qual -Wmissing-field-initializers -Wimplicit-fallthrough -Wcovered-switch-default -Wstring-conversion -Wmisleading-indentation -Wctad-maybe-unsupported -fdiagnostics-color -MD -MT CMakeFiles/cmTC_d6793.dir/CheckSymbolExists.c.o -MF CMakeFiles/cmTC_d6793.dir/CheckSymbolExists.c.o.d -o CMakeFiles/cmTC_d6793.dir/CheckSymbolExists.c.o -c /home/agirjoaba/dynamatic4ml_fork/visual-dataflow/build/CMakeFiles/CMakeScratch/TryCompile-IUF8fJ/CheckSymbolExists.c
+        /home/agirjoaba/dynamatic4ml_fork/visual-dataflow/build/CMakeFiles/CMakeScratch/TryCompile-IUF8fJ/CheckSymbolExists.c:2:10: fatal error: 'os/signpost.h' file not found
+            2 | #include <os/signpost.h>
+              |          ^~~~~~~~~~~~~~~
+        1 error generated.
+        ninja: build stopped: subcommand failed.
+        
+      exitCode: 1
+...

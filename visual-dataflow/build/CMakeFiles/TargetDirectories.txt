@@ -1,0 +1,14 @@
+/home/agirjoaba/dynamatic4ml_fork/visual-dataflow/build/CMakeFiles/intrinsics_gen.dir
+/home/agirjoaba/dynamatic4ml_fork/visual-dataflow/build/CMakeFiles/omp_gen.dir
+/home/agirjoaba/dynamatic4ml_fork/visual-dataflow/build/CMakeFiles/acc_gen.dir
+/home/agirjoaba/dynamatic4ml_fork/visual-dataflow/build/CMakeFiles/RISCVTargetParserTableGen.dir
+/home/agirjoaba/dynamatic4ml_fork/visual-dataflow/build/CMakeFiles/mlir-tablegen-targets.dir
+/home/agirjoaba/dynamatic4ml_fork/visual-dataflow/build/CMakeFiles/mlir-headers.dir
+/home/agirjoaba/dynamatic4ml_fork/visual-dataflow/build/CMakeFiles/mlir-generic-headers.dir
+/home/agirjoaba/dynamatic4ml_fork/visual-dataflow/build/CMakeFiles/mlir-doc.dir
+/home/agirjoaba/dynamatic4ml_fork/visual-dataflow/build/CMakeFiles/VisualDataflow.linux.x86_64.dir
+/home/agirjoaba/dynamatic4ml_fork/visual-dataflow/build/CMakeFiles/edit_cache.dir
+/home/agirjoaba/dynamatic4ml_fork/visual-dataflow/build/CMakeFiles/rebuild_cache.dir
+/home/agirjoaba/dynamatic4ml_fork/visual-dataflow/build/godot-cpp/CMakeFiles/godot-cpp.dir
+/home/agirjoaba/dynamatic4ml_fork/visual-dataflow/build/godot-cpp/CMakeFiles/edit_cache.dir
+/home/agirjoaba/dynamatic4ml_fork/visual-dataflow/build/godot-cpp/CMakeFiles/rebuild_cache.dir

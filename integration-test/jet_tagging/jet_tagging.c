@@ -6,8 +6,7 @@
 
 #define TRUNCATE_LAYER(y, idx)                         \
     acc = acc >> (FRAC_DEFAULT);                       \
-    y[idx] = (layer_1_t)acc;                           \
-    // printf("y[%d] = %d\n", idx, y[idx]);
+    y[idx] = (layer_1_t)acc;                           
 
 #define DOT_PROD(x, y, vec_sz)                          \
     acc = 0;                                            \

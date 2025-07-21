@@ -1,0 +1,12 @@
+# Sample sequence of commands for Dynamatic frontend
+
+
+set-dynamatic-path  .
+set-src             integration-test/jet_tagging_inline/jet_tagging_inline.c
+compile        
+write-hdl
+simulate
+synthesize
+
+# Exit the frontend
+exit
